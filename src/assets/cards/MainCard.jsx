@@ -82,7 +82,7 @@ export default function MainCard() {
             />
           </ul>
           <div className="flex border-t pt-5 justify-center">
-            <ResumeBtn link="/Henry_Chung_Resume.pdf" text="" />
+            <ResumeBtn link="/henry-portfolio/Henry_Chung_Resume.pdf" text="" />
             {/* <ResumeBtn link="/Henry_Chung_Resume_WebDev.pdf" text="web" /> */}
           </div>
         </div>
