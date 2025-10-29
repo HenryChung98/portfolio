@@ -1,0 +1,91 @@
+---
+import App from '../App';
+import "../index.css";
+---
+
+<html lang="en">
+  <head>
+  	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+    <title>Henry Chung | Software Engineer</title>
+
+    <meta
+      name="description"
+      content="Henry Chung is a Software Engineer specializing in Next.js, Supabase, and TypeScript for web development, and Unity, Unreal Enginer for game development. View his projects, skills, and experience in modern development."
+    />
+    <meta
+      name="keywords"
+      content="Henry Chung, Portfolio, Next.js, Supabase, TypeScript, React, Full Stack, SaaS, CRM, Unity, Unreal Engine"
+    />
+    <meta name="author" content="Henry Chung" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Henry Chung | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software Engineer specializing in Next.js, Supabase, and TypeScript for web development, and Unity, Unreal Enginer for game development. View his projects, skills, and experience in modern development."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://henrychung98.github.io/henry-portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://henrychung98.github.io/henry-portfolio/logo-png.png"
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Henry Chung",
+        "url": "https://henrychung98.github.io/henry-portfolio/",
+        "jobTitle": "Software Engineer",
+        "sameAs": [
+          "https://github.com/HenryChung98",
+          "https://www.linkedin.com/in/henry-chung-cs/"
+        ],
+        "knowsAbout": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Supabase",
+          "AWS",
+          "Git",
+          "Unity",
+          "UnrealEngine"
+        ],
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "CRM Web Application",
+            "description": "A SaaS CRM system built with Next.js App Router and Supabase."
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Game Projects",
+            "description": "Interactive games built with Unity and Unreal Engine, demonstrating 2D/3D graphics, gameplay mechanics, and performance optimization."
+          }
+        ]
+      }
+    </script>
+  </head>
+ 	<body>
+		<div id="root">
+      		<App client:load />
+    	</div>
+	</body>
+</html>
