@@ -81,9 +81,9 @@ export default function DescBox({
               ))}
             </div>
           </div>
-          <h3 className="text-sm text-gray-600 m-5 mb-3 font-semibold">
+          <h4 className="text-sm text-gray-600 m-5 mb-3 font-semibold">
             {subTitle}
-          </h3>
+          </h4>
           <ul className="text-blue-800 ml-5 text-sm md:text-xs font-bold">
             {sourceCodeLink && (
               <a

@@ -63,7 +63,9 @@ export default function WebProjects() {
           "/Icons/mongodb-icon.webp",
         ]}
         skillIconAlts={["js", "nextjs", "mongodb"]}
-        subTitle={"A Platform for Competitive Bidders"}
+        subTitle={
+          "Competitive bidding platform built for Full-Stack Development course team project"
+        }
         descNum={1}
         desc={["An intuitive auction platform built to simplify bidding"]}
         sourceCodeLink={"https://github.com/timdonato/csis3380-final"}
