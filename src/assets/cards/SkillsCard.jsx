@@ -9,79 +9,101 @@ function SkillIcon({ iconPath, iconAlt }) {
   };
 
   return (
-    <>
+    <li className="w-1/3 md:w-1/6">
       <img
         src={`/henry-portfolio${iconPath}`}
         alt={iconAlt}
         onMouseEnter={handleHover}
-        className={`w-1/3 md:w-1/6 p-4 md:p-7 ${rotateDegree} hover:drop-shadow-lg transition-transform duration-300`}
+        className={`p-4 md:p-7 ${rotateDegree} hover:drop-shadow-lg transition-transform duration-300`}
       />
-    </>
+    </li>
   );
 }
 
 export default function SkillsCard() {
   return (
     <>
-      <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
-        Programing Languages
-      </h3>
-      <div className="flex flex-wrap items-center">
-        <SkillIcon iconPath="/Icons/c-icon.webp" iconAlt="c" />
-        <SkillIcon iconPath="/Icons/cpp-icon.webp" iconAlt="cpp" />
-        <SkillIcon iconPath="/Icons/cs-icon.webp" iconAlt="cs" />
-        <SkillIcon iconPath="/Icons/python-icon.webp" iconAlt="python" />
-        <SkillIcon iconPath="/Icons/js-icon.webp" iconAlt="js" />
-        <SkillIcon iconPath="/Icons/ts-icon.webp" iconAlt="ts" />
+      <div>
+        <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
+          Programing Languages
+        </h3>
+        <ul className="flex flex-wrap items-center">
+          <SkillIcon iconPath="/Icons/c-icon.webp" iconAlt="C language" />
+          <SkillIcon iconPath="/Icons/cpp-icon.webp" iconAlt="C++" />
+          <SkillIcon iconPath="/Icons/cs-icon.webp" iconAlt="C#" />
+          <SkillIcon iconPath="/Icons/python-icon.webp" iconAlt="Python" />
+          <SkillIcon iconPath="/Icons/js-icon.webp" iconAlt="JavaScript" />
+          <SkillIcon iconPath="/Icons/ts-icon.webp" iconAlt="TypeScript" />
+        </ul>
       </div>
-      <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
-        Libraries & Frameworks
-      </h3>
-      <div className="flex flex-wrap">
-        <SkillIcon iconPath="/Icons/express-icon.webp" iconAlt="express" />
-        <SkillIcon iconPath="/Icons/threejs-icon.webp" iconAlt="threejs" />
-        <SkillIcon iconPath="/Icons/react-icon.webp" iconAlt="react" />
-        <SkillIcon iconPath="/Icons/nextjs-icon.webp" iconAlt="nextjs" />
-        <SkillIcon iconPath="/Icons/tailwind-css-icon.webp" iconAlt="tailwind" />
-        <SkillIcon iconPath="/Icons/socket-io-icon.webp" iconAlt="socket-io" />
+      <div>
+        <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
+          Libraries & Frameworks
+        </h3>
+        <ul className="flex flex-wrap">
+          <SkillIcon iconPath="/Icons/express-icon.webp" iconAlt="Express" />
+          <SkillIcon iconPath="/Icons/react-icon.webp" iconAlt="React" />
+          <SkillIcon iconPath="/Icons/threejs-icon.webp" iconAlt="Threejs" />
+          <SkillIcon iconPath="/Icons/nextjs-icon.webp" iconAlt="Next.js" />
+          <SkillIcon
+            iconPath="/Icons/tailwind-css-icon.webp"
+            iconAlt="TailwindCSS"
+          />
+          <SkillIcon
+            iconPath="/Icons/socket-io-icon.webp"
+            iconAlt="Socket-io"
+          />
+        </ul>
       </div>
-      <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
-        Databases
-      </h3>
-      <div className="flex flex-wrap">
-        <SkillIcon iconPath="/Icons/mongodb-icon.webp" iconAlt="monfodb" />
-        <SkillIcon iconPath="/Icons/mysql-icon.webp" iconAlt="mysql" />
-        <SkillIcon iconPath="/Icons/sqlite-icon.webp" iconAlt="sqlite" />
+      <div>
+        <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
+          Databases
+        </h3>
+        <ul className="flex flex-wrap">
+          <SkillIcon iconPath="/Icons/mongodb-icon.webp" iconAlt="MongoDB" />
+          <SkillIcon iconPath="/Icons/mysql-icon.webp" iconAlt="MySQL" />
+          <SkillIcon iconPath="/Icons/sqlite-icon.webp" iconAlt="SQLite" />
+        </ul>
       </div>
-      <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
-        AI Tools
-      </h3>
-      <div className="flex flex-wrap">
-        <SkillIcon iconPath="/Icons/cursor-ai-code-icon.webp" iconAlt="cursor" />
-        <SkillIcon iconPath="/Icons/google-gemini-icon.webp" iconAlt="gemini" />
-        <SkillIcon iconPath="/Icons/claude-ai-icon.webp" iconAlt="claude" />
-        <SkillIcon iconPath="/Icons/chatgpt-icon.webp" iconAlt="chatgpt" />
+      <div>
+        <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
+          AI Tools
+        </h3>
+        <ul className="flex flex-wrap">
+          <SkillIcon
+            iconPath="/Icons/cursor-ai-code-icon.webp"
+            iconAlt="Cursor AI"
+          />
+          <SkillIcon
+            iconPath="/Icons/google-gemini-icon.webp"
+            iconAlt="Gemini"
+          />
+          <SkillIcon iconPath="/Icons/claude-ai-icon.webp" iconAlt="Claude" />
+          <SkillIcon iconPath="/Icons/chatgpt-icon.webp" iconAlt="ChatGPT" />
+        </ul>
       </div>
-      <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
-        Software & Tools
-      </h3>
-      <div className="flex flex-wrap">
-        <SkillIcon
-          iconPath="/Icons/unreal-engine-icon.webp"
-          iconAlt="unreal-engine"
-        />
-        <SkillIcon
-          iconPath="/Icons/unity-game-engine-icon.webp"
-          iconAlt="unity-engine"
-        />
-        <SkillIcon iconPath="/Icons/git-icon.webp" iconAlt="git" />
-        <SkillIcon iconPath="/Icons/supabase-icon.webp" iconAlt="supabase" />
-        <SkillIcon iconPath="/Icons/figma-icon.webp" iconAlt="figma" />
-        <SkillIcon iconPath="/Icons/aws-icon.webp" iconAlt="aws" />
-        <SkillIcon
-          iconPath="/Icons/adobe-premiere-pro-icon.webp"
-          iconAlt="adobe-premiere-pro"
-        />
+      <div>
+        <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">
+          Software & Tools
+        </h3>
+        <ul className="flex flex-wrap">
+          <SkillIcon
+            iconPath="/Icons/unreal-engine-icon.webp"
+            iconAlt="Unreal Engine"
+          />
+          <SkillIcon
+            iconPath="/Icons/unity-game-engine-icon.webp"
+            iconAlt="Unity Engine"
+          />
+          <SkillIcon iconPath="/Icons/git-icon.webp" iconAlt="Git" />
+          <SkillIcon iconPath="/Icons/supabase-icon.webp" iconAlt="Supabase" />
+          <SkillIcon iconPath="/Icons/figma-icon.webp" iconAlt="Figma" />
+          <SkillIcon iconPath="/Icons/aws-icon.webp" iconAlt="AWS" />
+          <SkillIcon
+            iconPath="/Icons/adobe-premiere-pro-icon.webp"
+            iconAlt="Adobe Premiere Pro"
+          />
+        </ul>
       </div>
     </>
   );

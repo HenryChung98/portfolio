@@ -6,6 +6,9 @@ export default function WebProjects() {
       <DescBox
         imgRatio={"landscape"}
         imgPath={"/projectDescAssets/web/crmApplicationBanner.webp"}
+        imgAlt={
+          "Banner for multi-organization CRM web application using Next.js, TypeScript, Supabase, and Tailwind CSS"
+        }
         title={"CRM Application (Ongoing)"}
         skillIcons={[
           "/Icons/ts-icon.webp",
@@ -28,6 +31,9 @@ export default function WebProjects() {
       <DescBox
         imgRatio={"landscape"}
         imgPath={"/projectDescAssets/web/chatAppBanner.webp"}
+        imgAlt={
+          "Banner for real-time chat application built with Next.js, JavaScript, Socket.IO, Tailwind CSS, and MySQL"
+        }
         title={"Chat Application"}
         skillIcons={[
           "/Icons/js-icon.webp",
@@ -47,6 +53,9 @@ export default function WebProjects() {
       <DescBox
         imgRatio={"landscape"}
         imgPath={"/projectDescAssets/web/auctionBanner.webp"}
+        imgAlt={
+          "Banner for auction platform website developed for competitive bidding, backend role using Next.js, JavaScript, and MongoDB"
+        }
         title={"Auction Website(Role: Backend)"}
         skillIcons={[
           "/Icons/js-icon.webp",
@@ -65,6 +74,9 @@ export default function WebProjects() {
       <DescBox
         imgRatio={"portrait"}
         imgPath={"/projectDescAssets/web/todoListBanner.webp"}
+        imgAlt={
+          "Banner for simple To-Do-List application built with TypeScript, featuring task management and checklists"
+        }
         title={"To-Do-List"}
         skillIcons={["/Icons/ts-icon.webp"]}
         skillIconAlts={["ts"]}
@@ -76,6 +88,9 @@ export default function WebProjects() {
       <DescBox
         imgRatio={"landscape"}
         imgPath={"/projectDescAssets/web/weatherAppBanner.webp"}
+        imgAlt={
+          "Banner for simple weather application built with JavaScript, allowing city search and weather information display"
+        }
         title={"Weather App"}
         skillIcons={["/Icons/js-icon.webp"]}
         skillIconAlts={["js"]}

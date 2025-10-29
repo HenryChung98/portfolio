@@ -20,6 +20,7 @@
 export default function DescBox({
   imgRatio,
   imgPath,
+  imgAlt,
   title,
   skillIcons = [],
   skillIconAlts = [],
@@ -49,7 +50,7 @@ export default function DescBox({
             )}
             <img
               src={`/henry-portfolio${imgPath}`}
-              alt="description img"
+              alt={imgAlt}
               className={`m-6 rounded shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl border-2 border-gray-700
                 ${imgRatio === "square" && "w-[200px] h-[200px]"}
                 ${
