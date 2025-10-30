@@ -32,14 +32,14 @@ int main() {
 }`}
           </code>
         </pre>
-        <a
+        {/* <a
           className="text-3d uppercase"
           href="https://henry-chung-3d-portfolio.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
         >
           View 3D Portfolio (archived)
-        </a>
+        </a> */}
       </div>
     </>
   );

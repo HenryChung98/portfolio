@@ -7,18 +7,38 @@ export default function GameProjects() {
         imgRatio={"landscape"}
         imgPath={"/projectDescAssets/game/gameJamBanner.webp"}
         imgAlt={
-          "Banner for Speech Bubble Game Banner for platformer game, Role: Programmer"
+          "Banner for Poker Game, developed in Unity, Role: Tech Lead & Programmer"
+        }
+        title={"Texas Hold'em Poker Game (Role: Lead Engineer)"}
+        skillIcons={[
+          "/Icons/unity-game-engine-icon.webp",
+          "/Icons/cs-icon.webp",
+        ]}
+        skillIconAlts={["Unity Engine", "C#"]}
+        subTitle={
+          "Poker game with AI opponents for Software Engineering course team project"
+        }
+        descNum={2}
+        desc={["one", "two"]}
+        sourceCodeLink={"https://github.com/HenryChung98/CMPT2276-POKER2"}
+        team
+      />
+      <DescBox
+        imgRatio={"landscape"}
+        imgPath={"/projectDescAssets/game/gameJamBanner.webp"}
+        imgAlt={
+          "Speech Bubble Game Banner for platformer game, Role: Programmer"
         }
         title={"Speech Bubble Game (Role: Programmer)"}
         skillIcons={[
           "/Icons/unity-game-engine-icon.webp",
           "/Icons/cs-icon.webp",
         ]}
-        skillIconAlts={["Unity Engine", "C# Programming"]}
+        skillIconAlts={["Unity Engine", "C#"]}
         subTitle={
           "Speech bubble platformer game themed 'Bubble' at the Vancouver Global Game Jam"
         }
-        descNum={4}
+        descNum={2}
         desc={[
           "Gain abilities by interacting with speech bubbles",
           "Navigate through traps and obstacles",
