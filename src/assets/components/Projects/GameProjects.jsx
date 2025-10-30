@@ -3,7 +3,7 @@ import DescBox from "./DescBox";
 export default function GameProjects() {
   return (
     <>
-      <DescBox
+      {/* <DescBox
         imgRatio={"landscape"}
         imgPath={"/projectDescAssets/game/gameJamBanner.webp"}
         imgAlt={
@@ -22,7 +22,7 @@ export default function GameProjects() {
         desc={["one", "two"]}
         sourceCodeLink={"https://github.com/HenryChung98/CMPT2276-POKER2"}
         team
-      />
+      /> */}
       <DescBox
         imgRatio={"landscape"}
         imgPath={"/projectDescAssets/game/gameJamBanner.webp"}
