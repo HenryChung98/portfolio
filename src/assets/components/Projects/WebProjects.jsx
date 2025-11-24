@@ -24,7 +24,9 @@ export default function WebProjects() {
           "Reusable hooks and components for UI",
           "Responsive and scalable frontend-backend interactions",
         ]}
-        sourceCodeLink={"https://github.com/HenryChung98/crm-project"}
+        sourceCodeLink={
+          "https://www.figma.com/board/2dp3cNv1EhX42ZtKcvvpAj/crm-project?node-id=0-1&p=f&t=7AduMzPWX6jn3klP-0"
+        }
         moveLink={"https://henry-crm-project.vercel.app/"}
         accessMethod={"website"}
       />
@@ -45,9 +47,7 @@ export default function WebProjects() {
         skillIconAlts={["js", "nextjs", "socket-io", "tailwind", "mysql"]}
         subTitle={"Real-time chat and messaging"}
         descNum={1}
-        desc={[
-          "A simple chat app featuring real-time messaging and easy connectivity",
-        ]}
+        desc={["A simple chat app featuring real-time messaging and easy connectivity"]}
         sourceCodeLink={"https://github.com/HenryChung98/multi-player-games"}
       />
       <DescBox
@@ -57,11 +57,7 @@ export default function WebProjects() {
           "Banner for auction platform website developed for competitive bidding, backend role using Next.js, JavaScript, and MongoDB"
         }
         title={"Auction Website(Role: Backend)"}
-        skillIcons={[
-          "/Icons/js-icon.webp",
-          "/Icons/nextjs-icon.webp",
-          "/Icons/mongodb-icon.webp",
-        ]}
+        skillIcons={["/Icons/js-icon.webp", "/Icons/nextjs-icon.webp", "/Icons/mongodb-icon.webp"]}
         skillIconAlts={["js", "nextjs", "mongodb"]}
         subTitle={
           "Competitive bidding platform built for Full-Stack Development course team project"
@@ -74,20 +70,6 @@ export default function WebProjects() {
         team
       />
       <DescBox
-        imgRatio={"portrait"}
-        imgPath={"/projectDescAssets/web/todoListBanner.webp"}
-        imgAlt={
-          "Banner for simple To-Do-List application built with TypeScript, featuring task management and checklists"
-        }
-        title={"To-Do-List"}
-        skillIcons={["/Icons/ts-icon.webp"]}
-        skillIconAlts={["ts"]}
-        subTitle={"Simple To-Do-List application"}
-        descNum={2}
-        desc={["Task Management", "Checklists"]}
-        sourceCodeLink={"https://github.com/HenryChung98/to-do-list-practice"}
-      />
-      <DescBox
         imgRatio={"landscape"}
         imgPath={"/projectDescAssets/web/weatherAppBanner.webp"}
         imgAlt={
@@ -98,10 +80,7 @@ export default function WebProjects() {
         skillIconAlts={["js"]}
         subTitle={"Simple weather application"}
         descNum={2}
-        desc={[
-          "Search for a city and check the current weather",
-          "See the location as well",
-        ]}
+        desc={["Search for a city and check the current weather", "See the location as well"]}
         sourceCodeLink={"https://github.com/HenryChung98/weather-app"}
       />
     </>
