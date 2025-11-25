@@ -73,7 +73,7 @@ export default function MainCard() {
               icon={<FaInstagram size={20} />}
             />
             <SocialBtn
-              link="mailto:tongsik98@gmail.com"
+              link="mailto:henrychung.dev@gmail.com"
               icon={<FaEnvelope size={20} />}
             />
             <SocialBtn

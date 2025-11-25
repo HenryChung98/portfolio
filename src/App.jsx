@@ -94,7 +94,7 @@ function App() {
         <MainCard />
         <section
           id="home"
-          className={`hidden md:block relative mb-2 md:right-1 z-10 bg-gray-100 rounded-lg shadow-xl p-5 w-full md:max-w-[750px] md:min-w-[300px] md:h-[550px] overflow-auto text-left 
+          className={`hidden md:block relative mb-2 md:right-1 z-10 bg-gray-100 rounded-lg shadow-xl w-full md:max-w-[750px] md:min-w-[300px] text-left 
             ${!isMobile && activeSection !== "home" ? "md:hidden" : ""} ${
             !isMobile && "slide-in-left"
           }`}
