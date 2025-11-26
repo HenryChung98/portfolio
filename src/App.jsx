@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 import ParticlesComponent from "./assets/components/Particles";
 
 // components
 import NavBar from "./assets/components/NavBar";
 import SectionContainer from "./assets/components/SectionContainer";
-import ScrollToTopButton from "./assets/components/ScrollToTopButton"; // for mobile
+import ScrollToTopButton from "./assets/components/ScrollToTopButton";
 
 // cards
 import MainCard from "./assets/cards/MainCard";
@@ -15,32 +14,13 @@ import Skills from "./assets/cards/SkillsCard";
 import Projects from "./assets/cards/ProjectsCard";
 import Contact from "./assets/cards/ContactCard";
 
-const ScrollArrowButton = ({ onClick }) => (
-  <div
-    className="bg-white rounded-full p-2 border- relative bottom-1 animate-pulse z-99 cursor-pointer hover:bg-gray-50 transition-colors"
-    onClick={onClick}
-  >
-    <MdOutlineKeyboardDoubleArrowUp size={30} />
-  </div>
-);
-
 function App() {
   const [activeSection, setActiveSection] = useState("home");
-  const [isMobile, setIsMobile] = useState(false);
-  const [showArrowButton, setShowArrowButton] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      const prev = window.history.scrollRestoration;
-      window.history.scrollRestoration = "manual";
-      window.scrollTo(0, 0);
-
-      return () => {
-        window.history.scrollRestoration = prev;
-      };
-    } else {
-      window.scrollTo(0, 0);
-    }
+    window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
@@ -48,43 +28,15 @@ function App() {
       setIsMobile(window.innerWidth < 768);
     };
 
-    const handleScroll = () => {
-      if (isMobile) {
-        setActiveSection(null);
-
-        if (window.scrollY > 50) {
-          setShowArrowButton(false);
-        }
-      }
-    };
-
     window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isMobile]);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleNavClick = (section) => {
     setActiveSection(section);
     if (isMobile) {
       document.getElementById(section).scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const handleArrowClick = () => {
-    setShowArrowButton(false);
-    const targetElement = document.getElementById("aboutMe");
-    const elementPosition = targetElement.offsetTop;
-    const offsetPosition = elementPosition - 60;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
   };
 
   return (
@@ -102,9 +54,6 @@ function App() {
           <Banner />
         </section>
 
-        {isMobile && showArrowButton && (
-          <ScrollArrowButton onClick={handleArrowClick} />
-        )}
         <SectionContainer
           id="aboutMe"
           cardComponent={<AboutMe />}
