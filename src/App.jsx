@@ -16,9 +16,11 @@ import Contact from "./assets/cards/ContactCard";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    setIsMobile(window.innerWidth < 768);
     window.history.scrollRestoration = "manual";
     window.scrollTo(0, 0);
   }, []);
