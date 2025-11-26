@@ -36,13 +36,13 @@ export default function NavBar({ activeSection, onNavClick }) {
           const currentScrollY = window.scrollY;
           const scrollDifference = Math.abs(currentScrollY - lastScrollY);
 
-          // 50px 이상 스크롤했을 때만 반응
+          // only update visibility if scrolled more than 50px
           if (scrollDifference > 50) {
             if (currentScrollY > lastScrollY) {
-              // 아래로 스크롤: 숨기기
+
               setIsVisible(false);
             } else if (currentScrollY < lastScrollY) {
-              // 위로 스크롤: 보이기
+
               setIsVisible(true);
             }
             setLastScrollY(currentScrollY);

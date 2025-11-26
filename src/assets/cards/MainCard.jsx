@@ -53,7 +53,7 @@ export default function MainCard() {
           className="relative bottom-10 rounded-full w-30 h-30"
         />
         <div className="flex flex-col space-y-1 relative bottom-5">
-          <h1 className="text-xl uppercase font-bold">Henry Chung</h1>
+          <h1 className="text-xl uppercase font-bold ">Henry Chung</h1>
           <h2 className="text-sm uppercase font-semibold">Software Engineer</h2>
           <ul className="flex flex-row justify-center items-center">
             <SocialBtn

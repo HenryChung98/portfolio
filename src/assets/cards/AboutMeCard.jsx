@@ -28,7 +28,7 @@ function CertificationIcon({ iconPath, iconAlt, issueDate, expiryDate }) {
 export default function AboutMeCard() {
   return (
     <>
-      <h3 className={`text-xl font-bold mb-4  border-b-2`}>About Me</h3>
+      <h3 className={`text-xl font-bold mb-4 border-b-2`}>About Me</h3>
       <article>
         <p className="mb-4">
           I am currently pursuing a Computing Science diploma at Douglas

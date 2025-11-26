@@ -17,7 +17,7 @@ import Contact from "./assets/cards/ContactCard";
 
 const ScrollArrowButton = ({ onClick }) => (
   <div
-    className="bg-white rounded-full p-2 border-3 relative bottom-1 animate-pulse z-99 cursor-pointer hover:bg-gray-50 transition-colors"
+    className="bg-white rounded-full p-2 border- relative bottom-1 animate-pulse z-99 cursor-pointer hover:bg-gray-50 transition-colors"
     onClick={onClick}
   >
     <MdOutlineKeyboardDoubleArrowUp size={30} />
@@ -89,7 +89,7 @@ function App() {
 
   return (
     <>
-      <main className="flex flex-col mt-15 md:mt-0 justify-center items-center md:w-[1280px] md:flex-row">
+      <main className="flex flex-col md:flex-row mt-15 md:mt-0 justify-center items-center md:w-[1280px]">
         <NavBar activeSection={activeSection} onNavClick={handleNavClick} />
         <MainCard />
         <section

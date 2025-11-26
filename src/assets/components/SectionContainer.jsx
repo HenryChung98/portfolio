@@ -31,7 +31,7 @@ const SectionScrollButton = ({ containerRef }) => {
       onClick={scrollToTop}
       className={`
         sticky bottom-1 left-full transform
-        bg-blue-400 text-white border-3 border-black
+        bg-blue-400 text-white
         p-2 rounded-xl
         hover:opacity-70
         transition-all duration-300 

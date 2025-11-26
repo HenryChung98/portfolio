@@ -73,7 +73,7 @@ export default function GameProjects() {
         imgAlt={
           "Banner for Rotation Rush endless game with screen-spinning twists, developed in Unity and C#"
         }
-        title={"Rotation Rush"}
+        title={"Infinite Scroll Game"}
         skillIcons={["/Icons/unity-game-engine-icon.webp", "/Icons/cs-icon.webp"]}
         skillIconAlts={["unreal-engine", "cs"]}
         subTitle={"Endless game with screen-spinning twists and obstacle dodging"}
@@ -82,22 +82,6 @@ export default function GameProjects() {
         sourceCodeLink={"https://github.com/HenryChung98/RotationRush"}
         moveLink={"https://9henrychung8.itch.io/rotation-rush"}
         accessMethod={"playNow"}
-      />
-      <DescBox
-        imgRatio={"landscape"}
-        imgPath={"/projectDescAssets/game/infiniteScrollBanner.webp"}
-        imgAlt={
-          "Banner for Infinite Scroll endless runner game, dodge obstacles and collect coins, developed in Unreal Engine"
-        }
-        title={"Infinite Scroll Game"}
-        skillIcons={["/Icons/unreal-engine-icon.webp"]}
-        skillIconAlts={["unreal-engine", "cpp"]}
-        subTitle={"An endless runner where players dodge obstacles while collecting coins"}
-        descNum={3}
-        desc={["Endless gameplay", "Challenging obstacle", "Collect coins"]}
-        sourceCodeLink={""}
-        moveLink={"https://9henrychung8.itch.io/practicing-deploying-unreal-engine-project"}
-        accessMethod={"download"}
       />
       <DescBox
         imgRatio={"landscape"}
@@ -116,22 +100,6 @@ export default function GameProjects() {
         sourceCodeLink={"https://henrychung98.github.io/project/levelDevilClone1/"}
         moveLink={"https://9henrychung8.itch.io/level-devil-clone"}
         accessMethod={"download"}
-      />
-      <DescBox
-        imgRatio={"portrait"}
-        imgPath={"/projectDescAssets/game/flappyBirdCloneBanner.webp"}
-        imgAlt={
-          "Banner for Flappy Bird Clone game, endless gameplay and challenging obstacles, developed in Unity and C#"
-        }
-        title={"Flappy Bird Clone"}
-        skillIcons={["/Icons/unity-game-engine-icon.webp", "/Icons/cs-icon.webp"]}
-        skillIconAlts={["unreal-engine", "cs"]}
-        subTitle={"A clone of the classic Flappy Bird game"}
-        descNum={2}
-        desc={["Endless gameplay", "Challenging obstacle"]}
-        sourceCodeLink={"https://github.com/HenryChung98/Flappy-Bird-Clone"}
-        moveLink={"#"}
-        accessMethod={""}
       />
       <DescBox
         imgRatio={"square"}

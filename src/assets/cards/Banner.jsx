@@ -75,7 +75,7 @@ export default function Banner() {
           onClick={() => setIsModalOpen(false)}
         >
           <div
-            className="bg-gray-800 rounded-lg p-6 max-w-2xl w-full"
+            className={`bg-gray-800 rounded-lg p-6 max-w-2xl w-full fade-in-fwd`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="bg-white p-6 rounded autoflow-auto">
