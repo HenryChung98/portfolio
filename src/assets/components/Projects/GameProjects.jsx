@@ -13,11 +13,13 @@ export default function GameProjects() {
         subTitle={"Poker game with AI opponents for Software Engineering course team project"}
         descNum={3}
         desc={[
-          "Play cards and manage bets through game rounds",
-          "Evaluate hands and determine winners",
-          "Interact with UI elements and track chip counts",
+          "Provide in-game poker hand reference guide and live odds estimation",
+          "Animate card dealing and turn marker transitions",
+          "Highlight winning hand combinations after showdown",
         ]}
         sourceCodeLink={"https://github.com/HenryChung98/CMPT2276-POKER2"}
+        moveLink={"https://9henrychung8.itch.io/prototype-texas-holdem-poker"}
+        accessMethod={"playNow"}
         team
       />
       <DescBox
