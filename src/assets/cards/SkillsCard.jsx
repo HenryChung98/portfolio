@@ -40,6 +40,7 @@ export default function SkillsCard() {
       <div>
         <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">Frontend</h3>
         <ul className="flex flex-wrap">
+          <SkillIcon iconPath="/Icons/tanstack-qeury-icon.webp" iconAlt="Tanstack Query" />
           <SkillIcon iconPath="/Icons/nextjs-icon.webp" iconAlt="Next.js" />
           <SkillIcon iconPath="/Icons/react-icon.webp" iconAlt="React" />
           <SkillIcon iconPath="/Icons/tailwind-css-icon.webp" iconAlt="TailwindCSS" />
@@ -50,10 +51,10 @@ export default function SkillsCard() {
         <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">Backend & Database</h3>
         <ul className="flex flex-wrap">
           <SkillIcon iconPath="/Icons/supabase-icon.webp" iconAlt="Supabase" />
+          <SkillIcon iconPath="/Icons/socket-io-icon.webp" iconAlt="Socket.io" />
           <SkillIcon iconPath="/Icons/mysql-icon.webp" iconAlt="MySQL" />
           <SkillIcon iconPath="/Icons/sqlite-icon.webp" iconAlt="SQLite" />
           <SkillIcon iconPath="/Icons/mongodb-icon.webp" iconAlt="MongoDB" />
-          <SkillIcon iconPath="/Icons/socket-io-icon.webp" iconAlt="Socket.io" />
           <SkillIcon iconPath="/Icons/express-icon.webp" iconAlt="Express" />
         </ul>
       </div>

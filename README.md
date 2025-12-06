@@ -3,6 +3,7 @@
 ### Frameworks
 
 <!-- - [Vite](https://vitejs.dev/guide/) -->
+
 - [Astro](https://astro.build/)
 - [Tailwind](https://tailwindcss.com/docs/guides/create-react-app)
 
@@ -15,16 +16,15 @@
 
 ### Resources
 
-- [icons](https://uxwing.com/)
+- [icons1](https://uxwing.com/)
+- [icons2](https://pnghdpro.com/)
 - [Convert png to webp](https://www.freeconvert.com/png-to-webp)
 
 ### Deployment
 
 - [Github Action](https://github.com/)
 
-
-
-<!-- 
+<!--
 hidden to sr-only
-claude still cannot read 
+claude still cannot read
  -->
