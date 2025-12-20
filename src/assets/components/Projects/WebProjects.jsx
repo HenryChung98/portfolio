@@ -11,12 +11,13 @@ export default function WebProjects() {
         }
         title={"CRM Application (Ongoing)"}
         skillIcons={[
+          "/Icons/tanstack-query-icon.webp",
           "/Icons/ts-icon.webp",
           "/Icons/nextjs-icon.webp",
           "/Icons/supabase-icon.webp",
           "/Icons/tailwind-css-icon.webp",
         ]}
-        skillIconAlts={["ts", "nextjs", "supabase", "tailwind"]}
+        skillIconAlts={["tanstack", "ts", "nextjs", "supabase", "tailwind"]}
         subTitle={"Multi-organization CRM Web Application"}
         descNum={3}
         desc={[

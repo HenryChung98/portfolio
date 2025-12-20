@@ -40,24 +40,6 @@ export default function GameProjects() {
       />
       <DescBox
         imgRatio={"landscape"}
-        imgPath={"/projectDescAssets/game/shooterGameBanner.webp"}
-        imgAlt={
-          "Banner for Shooter game with level design and weapon systems, developed in Unreal Engine"
-        }
-        title={"Shooter Game"}
-        skillIcons={["/Icons/unreal-engine-icon.webp"]}
-        skillIconAlts={["Unreal Engine"]}
-        subTitle={"Shooter game with level design, weapon systems"}
-        descNum={4}
-        desc={[
-          "Multiple weapons",
-          "Realistic recoil",
-          "Immersive animations",
-          "Goal-Oriented gameplay",
-        ]}
-      />
-      <DescBox
-        imgRatio={"landscape"}
         imgPath={"/projectDescAssets/game/VRGameBanner.webp"}
         imgAlt={
           "Banner for VR Shooter game playable on Meta Quest Link, developed in Unreal Engine"
@@ -85,24 +67,7 @@ export default function GameProjects() {
         moveLink={"https://9henrychung8.itch.io/rotation-rush"}
         accessMethod={"playNow"}
       />
-      <DescBox
-        imgRatio={"landscape"}
-        imgPath={"/projectDescAssets/game/levelDevilCloneBanner.webp"}
-        imgAlt={
-          "Banner for Level Devil Clone platformer game with multiple stages and unpredictable obstacles, developed in Unity and C#"
-        }
-        title={"Level Devil Clone"}
-        skillIcons={["/Icons/unity-game-engine-icon.webp", "/Icons/cs-icon.webp"]}
-        skillIconAlts={["unreal-engine", "cs"]}
-        subTitle={
-          "A clone of Level Devil, a challenging platformer featuring unpredictable traps and obstacle-based gameplay."
-        }
-        descNum={3}
-        desc={["Multiple stages", "Unexpected obstacle", "Goal door to move next stage"]}
-        sourceCodeLink={"https://henrychung98.github.io/project/levelDevilClone1/"}
-        moveLink={"https://9henrychung8.itch.io/level-devil-clone"}
-        accessMethod={"download"}
-      />
+
       <DescBox
         imgRatio={"square"}
         imgPath={"/projectDescAssets/game/mouseAccuracyBanner.webp"}
