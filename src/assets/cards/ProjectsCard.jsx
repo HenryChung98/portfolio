@@ -39,7 +39,7 @@ export default function ProjectsCard() {
               Game
             </button>
           </li>
-          <li className="inline-block w-20 text-center">
+          {/* <li className="inline-block w-20 text-center">
             <button
               className={`${
                 isSelected == "etc" && "bg-blue-600 text-white opacity-80"
@@ -48,7 +48,7 @@ export default function ProjectsCard() {
             >
               Etc
             </button>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="flex flex-wrap">

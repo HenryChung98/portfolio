@@ -3,8 +3,7 @@ import { useState } from "react";
 function CertificationIcon({ iconPath, iconAlt, issueDate, expiryDate }) {
   const [rotateDegree, setRotateDegree] = useState("");
   const handleHover = () => {
-    const randomRotate =
-      Math.random() > 0.5 ? "hover:-rotate-45" : "hover:rotate-45";
+    const randomRotate = Math.random() > 0.5 ? "hover:-rotate-45" : "hover:rotate-45";
     setRotateDegree(randomRotate);
   };
   return (
@@ -31,27 +30,26 @@ export default function AboutMeCard() {
       <h3 className={`text-xl font-bold mb-4 border-b-2`}>About Me</h3>
       <article>
         <p className="mb-4">
-          I am currently pursuing a Computing Science diploma at Douglas
-          College, with a deep passion for game and web development.
+          I have completed a Computing Science diploma at Douglas College, with a strong foundation
+          in computer science fundamentals.
         </p>
         <p className="mb-4">
-          I have developed video games using programming languages like C++ and
-          C#, along with industry-standard game engines such as Unity and Unreal
-          Engine. My expertise lies in designing game mechanics and building
-          intuitive user interfaces.
+          I have solid experience building web applications using modern technologies such as
+          Next.js, TypeScript, Tailwind CSS, and Supabase. I am currently developing a CRM web
+          application that emphasizes scalable architecture, secure authorization flows, strict
+          organization-level data isolation, and well-structured relational database design to
+          ensure data integrity and maintainability.
         </p>
         <p className="mb-4">
-          I also have a solid understanding of foundational web technologies and
-          experience with frameworks such as Next.js, Tailwind CSS for styling,
-          as well as backend services like Supabase. Currently, I am working on
-          a CRM project that helps small businesses manage customers and sales
-          more efficiently.
+          In addition to web development, I have experience in game development, using Unreal Engine
+          and C# with Unity. Through team-based projects, I contributed to implementing game
+          mechanics and user interfaces while applying software engineering principles such as clear
+          architecture, high cohesion, low coupling, and continuous refactoring.
         </p>
-        <p className="mb-4">
-          Outside of programming, I participate in dance performances and
-          drop-in sessions with my school club, which enhance my creativity and
-          collaboration skills.
-        </p>
+        {/* <p className="mb-4">
+          Outside of programming, I participate in dance performances and drop-in sessions with my
+          school club, which enhance my creativity and collaboration skills.
+        </p> */}
       </article>
       <article>
         <h3 className={`text-xl font-bold mb-4 border-b-2`}>Certifications</h3>

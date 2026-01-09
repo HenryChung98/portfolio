@@ -3,7 +3,7 @@ import DescBox from "./DescBox";
 export default function EtcProjects() {
   return (
     <>
-      <DescBox
+      {/* <DescBox
         title={"File Manager"}
         subTitle={
           "File manager app that moves files based on their name or extension"
@@ -16,7 +16,7 @@ export default function EtcProjects() {
         imgPath={"/projectDescAssets/etc/fileManagerBanner.webp"}
         imgAlt={"File manager created by Python with OS library"}
         sourceCodeLink={"https://github.com/HenryChung98/file-manager"}
-      />
+      /> */}
     </>
   );
 }

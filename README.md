@@ -19,6 +19,7 @@
 - [icons1](https://uxwing.com/)
 - [icons2](https://pnghdpro.com/)
 - [Convert png to webp](https://www.freeconvert.com/png-to-webp)
+- [Convert video to gif](https://ezgif.com/)
 
 ### Deployment
 
