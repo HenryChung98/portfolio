@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// Icon size: 72px
 function SkillIcon({ iconPath, iconAlt }) {
   const [rotateDegree, setRotateDegree] = useState("");
   const handleHover = () => {
@@ -9,12 +10,14 @@ function SkillIcon({ iconPath, iconAlt }) {
 
   return (
     <li className="w-1/3 md:w-1/6 relative group">
-      <img
-        src={`/henry-portfolio${iconPath}`}
-        alt={iconAlt}
-        onMouseEnter={handleHover}
-        className={`p-7 ${rotateDegree} hover:drop-shadow-lg transition-transform duration-300`}
-      />
+      <div className="p-7">
+        <img
+          src={`/henry-portfolio${iconPath}`}
+          alt={iconAlt}
+          onMouseEnter={handleHover}
+          className={`w-full h-full object-contain ${rotateDegree} hover:drop-shadow-lg transition-transform duration-300`}
+        />
+      </div>
       <span className="hidden md:block absolute left-1/2 -translate-x-1/2 -bottom-1 bg-gray-800 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
         {iconAlt}
       </span>
@@ -29,12 +32,12 @@ export default function SkillsCard() {
       <div>
         <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">Languages</h3>
         <ul className="flex flex-wrap items-center">
-          <SkillIcon iconPath="/Icons/ts-icon.webp" iconAlt="TypeScript" />
-          <SkillIcon iconPath="/Icons/js-icon.webp" iconAlt="JavaScript" />
+          <SkillIcon iconPath="/Icons/typescript-icon.webp" iconAlt="TypeScript" />
+          <SkillIcon iconPath="/Icons/javascript-icon.webp" iconAlt="JavaScript" />
           <SkillIcon iconPath="/Icons/python-icon.webp" iconAlt="Python" />
-          <SkillIcon iconPath="/Icons/c-icon.webp" iconAlt="C" />
+          <SkillIcon iconPath="/Icons/c-language-icon.webp" iconAlt="C" />
           <SkillIcon iconPath="/Icons/cpp-icon.webp" iconAlt="C++" />
-          <SkillIcon iconPath="/Icons/cs-icon.webp" iconAlt="C#" />
+          <SkillIcon iconPath="/Icons/csharp-icon.webp" iconAlt="C#" />
         </ul>
       </div>
       <div>
@@ -50,20 +53,21 @@ export default function SkillsCard() {
       <div>
         <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">Backend & Database</h3>
         <ul className="flex flex-wrap">
+          <SkillIcon iconPath="/Icons/postgresql-icon.webp" iconAlt="PostgreSQL" />
           <SkillIcon iconPath="/Icons/supabase-icon.webp" iconAlt="Supabase" />
           <SkillIcon iconPath="/Icons/socket-io-icon.webp" iconAlt="Socket.io" />
           <SkillIcon iconPath="/Icons/mysql-icon.webp" iconAlt="MySQL" />
           <SkillIcon iconPath="/Icons/sqlite-icon.webp" iconAlt="SQLite" />
           <SkillIcon iconPath="/Icons/mongodb-icon.webp" iconAlt="MongoDB" />
-          <SkillIcon iconPath="/Icons/express-icon.webp" iconAlt="Express" />
         </ul>
       </div>
       <div>
         <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">Cloud & DevOps</h3>
         <ul className="flex flex-wrap">
           {/* <SkillIcon iconPath="/Icons/terraform-icon.webp" iconAlt="Terraform" /> */}
+          <SkillIcon iconPath="/Icons/oracle-icon.webp" iconAlt="Oracle Cloud" />
           <SkillIcon iconPath="/Icons/docker-icon.webp" iconAlt="Docker" />
-          <SkillIcon iconPath="/Icons/aws-icon.webp" iconAlt="AWS" />
+          <SkillIcon iconPath="/Icons/aws-icon.webp" iconAlt="Amazon Web Services" />
           <SkillIcon iconPath="/Icons/git-icon.webp" iconAlt="Git" />
         </ul>
       </div>

@@ -8,7 +8,7 @@ export default function GameProjects() {
         imgPath={"/projectDescAssets/game/pokerBanner.webp"}
         imgAlt={"Banner for Poker Game, developed in Unity, Role: Tech Lead & Programmer"}
         title={"Texas Hold'em Poker Game (Role: Lead Engineer)"}
-        skillIcons={["/Icons/unity-game-engine-icon.webp", "/Icons/cs-icon.webp"]}
+        skillIcons={["/Icons/unity-game-engine-icon.webp", "/Icons/csharp-icon.webp"]}
         skillIconAlts={["Unity Engine", "C#"]}
         subTitle={"Poker game with AI opponents for Software Engineering course team project"}
         descNum={3}
@@ -27,7 +27,7 @@ export default function GameProjects() {
         imgPath={"/projectDescAssets/game/gameJamBanner.webp"}
         imgAlt={"Speech Bubble Game Banner for platformer game, Role: Programmer"}
         title={"Speech Bubble Game (Role: Programmer)"}
-        skillIcons={["/Icons/unity-game-engine-icon.webp", "/Icons/cs-icon.webp"]}
+        skillIcons={["/Icons/unity-game-engine-icon.webp", "/Icons/csharp-icon.webp"]}
         skillIconAlts={["Unity Engine", "C#"]}
         subTitle={"Speech bubble platformer game themed 'Bubble' at the Vancouver Global Game Jam"}
         descNum={2}
@@ -58,7 +58,7 @@ export default function GameProjects() {
           "Banner for Rotation Rush endless game with screen-spinning twists, developed in Unity and C#"
         }
         title={"Infinite Scroll Game"}
-        skillIcons={["/Icons/unity-game-engine-icon.webp", "/Icons/cs-icon.webp"]}
+        skillIcons={["/Icons/unity-game-engine-icon.webp", "/Icons/csharp-icon.webp"]}
         skillIconAlts={["unreal-engine", "cs"]}
         subTitle={"Endless game with screen-spinning twists and obstacle dodging"}
         descNum={2}
@@ -90,7 +90,7 @@ export default function GameProjects() {
           "Banner for Liar Game web application, simple psychological game developed in JavaScript"
         }
         title={"Liar Game"}
-        skillIcons={["/Icons/js-icon.webp"]}
+        skillIcons={["/Icons/javascript-icon.webp"]}
         skillIconAlts={["js"]}
         subTitle={"Liar game application developed by JavaScript"}
         descNum={1}

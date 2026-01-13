@@ -12,7 +12,7 @@ export default function WebProjects() {
         title={"CRM Application (Ongoing)"}
         skillIcons={[
           "/Icons/tanstack-query-icon.webp",
-          "/Icons/ts-icon.webp",
+          "/Icons/typescript-icon.webp",
           "/Icons/nextjs-icon.webp",
           "/Icons/supabase-icon.webp",
           "/Icons/tailwind-css-icon.webp",
@@ -39,7 +39,7 @@ export default function WebProjects() {
         }
         title={"Chat Application"}
         skillIcons={[
-          "/Icons/js-icon.webp",
+          "/Icons/javascript-icon.webp",
           "/Icons/nextjs-icon.webp",
           "/Icons/socket-io-icon.webp",
           "/Icons/tailwind-css-icon.webp",
@@ -58,7 +58,7 @@ export default function WebProjects() {
           "Banner for auction platform website developed for competitive bidding, backend role using Next.js, JavaScript, and MongoDB"
         }
         title={"Auction Website(Role: Backend)"}
-        skillIcons={["/Icons/js-icon.webp", "/Icons/nextjs-icon.webp", "/Icons/mongodb-icon.webp"]}
+        skillIcons={["/Icons/javascript-icon.webp", "/Icons/nextjs-icon.webp", "/Icons/mongodb-icon.webp"]}
         skillIconAlts={["js", "nextjs", "mongodb"]}
         subTitle={
           "Competitive bidding platform built for Full-Stack Development course team project"
@@ -77,7 +77,7 @@ export default function WebProjects() {
           "Banner for simple weather application built with JavaScript, allowing city search and weather information display"
         }
         title={"Weather App"}
-        skillIcons={["/Icons/js-icon.webp"]}
+        skillIcons={["/Icons/javascript-icon.webp"]}
         skillIconAlts={["js"]}
         subTitle={"Simple weather application"}
         descNum={2}

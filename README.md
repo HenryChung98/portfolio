@@ -2,8 +2,6 @@
 
 ### Frameworks
 
-<!-- - [Vite](https://vitejs.dev/guide/) -->
-
 - [Astro](https://astro.build/)
 - [Tailwind](https://tailwindcss.com/docs/guides/create-react-app)
 
