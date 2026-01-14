@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 // Icon size: 72px
+// tanstack, drizzle, antigravity are not 72px
 function SkillIcon({ iconPath, iconAlt }) {
   const [rotateDegree, setRotateDegree] = useState("");
   const handleHover = () => {
@@ -53,9 +54,9 @@ export default function SkillsCard() {
       <div>
         <h3 className="text-xl font-bold mb-4 text-indigo-600 border-b-2">Backend & Database</h3>
         <ul className="flex flex-wrap">
-          <SkillIcon iconPath="/Icons/postgresql-icon.webp" iconAlt="PostgreSQL" />
+          <SkillIcon iconPath="/Icons/drizzle-orm-icon.webp" iconAlt="Drizzle ORM" />
           <SkillIcon iconPath="/Icons/supabase-icon.webp" iconAlt="Supabase" />
-          <SkillIcon iconPath="/Icons/socket-io-icon.webp" iconAlt="Socket.io" />
+          <SkillIcon iconPath="/Icons/postgresql-icon.webp" iconAlt="PostgreSQL" />
           <SkillIcon iconPath="/Icons/mysql-icon.webp" iconAlt="MySQL" />
           <SkillIcon iconPath="/Icons/sqlite-icon.webp" iconAlt="SQLite" />
           <SkillIcon iconPath="/Icons/mongodb-icon.webp" iconAlt="MongoDB" />

@@ -6,18 +6,19 @@ export default function WebProjects() {
       <DescBox
         imgRatio={"landscape"}
         imgPath={"/projectDescAssets/web/crmApplicationBanner.webp"}
+        title={"CRM Application (Ongoing)"}
         imgAlt={
           "Banner for multi-organization CRM web application using Next.js, TypeScript, Supabase, and Tailwind CSS"
         }
-        title={"CRM Application (Ongoing)"}
         skillIcons={[
           "/Icons/tanstack-query-icon.webp",
-          "/Icons/typescript-icon.webp",
           "/Icons/nextjs-icon.webp",
           "/Icons/supabase-icon.webp",
+          "/Icons/postgresql-icon.webp",
+          "/Icons/typescript-icon.webp",
           "/Icons/tailwind-css-icon.webp",
         ]}
-        skillIconAlts={["tanstack", "ts", "nextjs", "supabase", "tailwind"]}
+        skillIconAlts={["tanstack", "nextjs", "supabase", "postgresql", "typescript", "tailwind"]}
         subTitle={"Multi-organization CRM Web Application"}
         descNum={3}
         desc={[
@@ -33,23 +34,40 @@ export default function WebProjects() {
       />
       <DescBox
         imgRatio={"landscape"}
-        imgPath={"/projectDescAssets/web/chatAppBanner.webp"}
-        imgAlt={
-          "Banner for real-time chat application built with Next.js, JavaScript, Socket.IO, Tailwind CSS, and MySQL"
-        }
-        title={"Chat Application"}
+        imgPath={"/projectDescAssets/web/quickdocxBanner.webp"}
+        imgAlt={"Banner for docx editor using Next.js, TypeScript, Supabase, and Tailwind CSS"}
+        title={"Quick Docx (Active)"}
         skillIcons={[
-          "/Icons/javascript-icon.webp",
+          "/Icons/oracle-icon.webp",
+          "/Icons/docker-icon.webp",
+          "/Icons/drizzle-orm-icon.webp",
+          "/Icons/tanstack-query-icon.webp",
           "/Icons/nextjs-icon.webp",
-          "/Icons/socket-io-icon.webp",
+          "/Icons/supabase-icon.webp",
+          "/Icons/postgresql-icon.webp",
+          "/Icons/typescript-icon.webp",
           "/Icons/tailwind-css-icon.webp",
-          "/Icons/mysql-icon.webp",
         ]}
-        skillIconAlts={["js", "nextjs", "socket-io", "tailwind", "mysql"]}
-        subTitle={"Real-time chat and messaging"}
-        descNum={1}
-        desc={["A simple chat app featuring real-time messaging and easy connectivity"]}
-        sourceCodeLink={"https://github.com/HenryChung98/multi-player-games"}
+        skillIconAlts={[
+          "oracle",
+          "docker",
+          "drizzle",
+          "tanstack",
+          "nextjs",
+          "supabase",
+          "postgresql",
+          "typescript",
+          "tailwind",
+        ]}
+        subTitle={"Docx Based Editor"}
+        descNum={3}
+        desc={[
+          "DOCX editor with PDF conversion using Gotenberg (Docker image)",
+          "Credit-based access to features",
+          "Free-limit enforcement via hashed IP for anonymous users",
+        ]}
+        moveLink={"https://quick-docx.vercel.app/"}
+        accessMethod={"website"}
       />
       <DescBox
         imgRatio={"landscape"}
@@ -58,8 +76,12 @@ export default function WebProjects() {
           "Banner for auction platform website developed for competitive bidding, backend role using Next.js, JavaScript, and MongoDB"
         }
         title={"Auction Website(Role: Backend)"}
-        skillIcons={["/Icons/javascript-icon.webp", "/Icons/nextjs-icon.webp", "/Icons/mongodb-icon.webp"]}
-        skillIconAlts={["js", "nextjs", "mongodb"]}
+        skillIcons={[
+          "/Icons/nextjs-icon.webp",
+          "/Icons/mongodb-icon.webp",
+          "/Icons/javascript-icon.webp",
+        ]}
+        skillIconAlts={["nextjs", "mongodb", "javascript"]}
         subTitle={
           "Competitive bidding platform built for Full-Stack Development course team project"
         }
