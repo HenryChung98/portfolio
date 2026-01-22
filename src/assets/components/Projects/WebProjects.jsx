@@ -12,13 +12,14 @@ export default function WebProjects() {
         }
         skillIcons={[
           "/Icons/tanstack-query-icon.webp",
+          "/Icons/shadcn-ui-icon.webp",
           "/Icons/nextjs-icon.webp",
           "/Icons/supabase-icon.webp",
           "/Icons/postgresql-icon.webp",
           "/Icons/typescript-icon.webp",
           "/Icons/tailwind-css-icon.webp",
         ]}
-        skillIconAlts={["tanstack", "nextjs", "supabase", "postgresql", "typescript", "tailwind"]}
+        skillIconAlts={["tanstack", "shadcn", "nextjs", "supabase", "postgresql", "typescript", "tailwind"]}
         subTitle={"Multi-organization CRM Web Application"}
         descNum={3}
         desc={[
@@ -42,6 +43,7 @@ export default function WebProjects() {
           "/Icons/docker-icon.webp",
           "/Icons/drizzle-orm-icon.webp",
           "/Icons/tanstack-query-icon.webp",
+          "/Icons/shadcn-ui-icon.webp",
           "/Icons/nextjs-icon.webp",
           "/Icons/supabase-icon.webp",
           "/Icons/postgresql-icon.webp",
@@ -53,6 +55,7 @@ export default function WebProjects() {
           "docker",
           "drizzle",
           "tanstack",
+          "shadcn",
           "nextjs",
           "supabase",
           "postgresql",

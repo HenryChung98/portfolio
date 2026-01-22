@@ -56,14 +56,8 @@ export default function MainCard() {
           <h1 className="text-xl uppercase font-bold ">Henry Chung</h1>
           <h2 className="text-sm uppercase font-semibold">Software Engineer</h2>
           <ul className="flex flex-row justify-center items-center">
-            <SocialBtn
-              link="https://github.com/HenryChung98"
-              icon={<FaGithub size={20} />}
-            />
-            <SocialBtn
-              link="https://9henrychung8.itch.io/"
-              icon={<FaItchIo size={20} />}
-            />
+            <SocialBtn link="https://github.com/HenryChung98" icon={<FaGithub size={20} />} />
+            <SocialBtn link="https://9henrychung8.itch.io/" icon={<FaItchIo size={20} />} />
             <SocialBtn
               link="https://www.linkedin.com/in/henry-chung-cs/"
               icon={<FaLinkedin size={20} />}
@@ -72,18 +66,11 @@ export default function MainCard() {
               link="https://www.instagram.com/_henrychung/"
               icon={<FaInstagram size={20} />}
             />
-            <SocialBtn
-              link="mailto:henrychung.dev@gmail.com"
-              icon={<FaEnvelope size={20} />}
-            />
-            <SocialBtn
-              link="tel:(778)322-3951"
-              icon={<FaMobileAlt size={20} />}
-            />
+            <SocialBtn link="mailto:henrychung.dev@gmail.com" icon={<FaEnvelope size={20} />} />
+            <SocialBtn link="tel:(778)322-3951" icon={<FaMobileAlt size={20} />} />
           </ul>
           <div className="flex border-t pt-5 justify-center">
-            <ResumeBtn link="/henry-portfolio/Henry_Chung_Resume.pdf" text="" />
-            {/* <ResumeBtn link="/Henry_Chung_Resume_WebDev.pdf" text="web" /> */}
+            <ResumeBtn link="/henry-portfolio/Hyungyu_Chung_Resume.pdf" text="" />
           </div>
         </div>
       </section>
