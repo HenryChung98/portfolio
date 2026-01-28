@@ -67,7 +67,7 @@ export default function AboutMeCard() {
             expiryDate="Expires June 2028"
           />
         </div>
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <h1 className={`text-xl font-bold mb-4 border-b-2`}>Play Now!</h1>
           <a
             href="https://gaembite.vercel.app/"
@@ -81,7 +81,7 @@ export default function AboutMeCard() {
               className="w-1/3 rounded mx-auto hover:animate-bounce "
             />
           </a>
-        </div>
+        </div> */}
       </article>
     </>
   );
