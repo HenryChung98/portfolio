@@ -48,6 +48,7 @@ export default function SkillsCard() {
           <SkillIcon iconPath="/Icons/tanstack-query-icon.webp" iconAlt="Tanstack Query" />
           <SkillIcon iconPath="/Icons/tailwind-css-icon.webp" iconAlt="TailwindCSS" />
           <SkillIcon iconPath="/Icons/shadcn-ui-icon.webp" iconAlt="Shadcn UI" />
+          <SkillIcon iconPath="/Icons/astro-icon.webp" iconAlt="Astro" />
           <SkillIcon iconPath="/Icons/threejs-icon.webp" iconAlt="Three.js" />
         </ul>
       </div>
