@@ -4,7 +4,7 @@ export default function Blog() {
   const [recentPosts, setRecentPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://henrychung98.github.io/henry-blog/api/recent-posts.json")
+    fetch("https://henrychung98.github.io/henry-blog/api/recent-posts.json")
       .then((res) => res.json())
       .then((data) => setRecentPosts(data));
   }, []);
