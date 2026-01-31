@@ -39,17 +39,23 @@ export default function Blog() {
               {post.title}
             </h4>
 
-            <p className="mb-4 text-sm leading-relaxed text-gray-600">
-              {post.description}
-            </p>
-
-            <time className="text-xs text-gray-500">
-              {new Date(post.pubDate).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              })}
-            </time>
+            <p className="mb-4 text-sm leading-relaxed text-gray-600">{post.description}</p>
+            <div className="flex items-center gap-2">
+              <time className="text-xs text-gray-500">
+                {new Date(post.pubDate).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </time>
+              <div className="flex flex-wrap gap-2">
+                {post.categories[0] && (
+                  <span className="bg-gray-200 rounded-xl px-2 py-1 text-xs text-gray-500">
+                    {post.categories[0]}
+                  </span>
+                )}
+              </div>
+            </div>
           </a>
         ))}
       </div>
