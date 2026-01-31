@@ -1,9 +1,9 @@
 import {
   FaEnvelope,
   FaGithub,
-  FaItchIo,
   FaLinkedin,
   FaInstagram,
+  FaItchIo,
   FaMobileAlt,
 } from "react-icons/fa";
 
@@ -57,7 +57,6 @@ export default function MainCard() {
           <h2 className="text-sm uppercase font-semibold">Software Engineer</h2>
           <ul className="flex flex-row justify-center items-center">
             <SocialBtn link="https://github.com/HenryChung98" icon={<FaGithub size={20} />} />
-            <SocialBtn link="https://9henrychung8.itch.io/" icon={<FaItchIo size={20} />} />
             <SocialBtn
               link="https://www.linkedin.com/in/henry-chung-cs/"
               icon={<FaLinkedin size={20} />}
@@ -66,6 +65,7 @@ export default function MainCard() {
               link="https://www.instagram.com/_henrychung/"
               icon={<FaInstagram size={20} />}
             />
+            <SocialBtn link="https://9henrychung8.itch.io/" icon={<FaItchIo size={20} />} />
             <SocialBtn link="mailto:henrychung.dev@gmail.com" icon={<FaEnvelope size={20} />} />
             <SocialBtn link="tel:(778)322-3951" icon={<FaMobileAlt size={20} />} />
           </ul>

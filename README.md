@@ -1,9 +1,20 @@
-## [Henry Portfolio](https://henrychung98.github.io/henry-portfolio/)
+## Henry Portfolio
+
+Personal portfolio website showcasing projects, skills, and experience.
+Built for performance, accessibility, and clean UI.
+
+
+## Live
+[Henry Portfolio](https://henrychung98.github.io/henry-portfolio/)
+
+
+## Tech Stack
 
 ### Frameworks
 
 - [Astro](https://astro.build/)
 - [Tailwind](https://tailwindcss.com/docs/guides/create-react-app)
+
 
 ### Libraries
 
@@ -12,12 +23,21 @@
 - Particle.js(npm install @tsparticles/react, npm install @tsparticles/all)
 - highlight.js(npm install highlight.js): for creating code snippet
 
-### Resources
+## Features
+- Static & fast Astro build
+- Responsive design
+- Contact form with EmailJS
+- Animated background effects
+- Syntax-highlighted code sections
+
+
+## Resources
 
 - [icons1](https://uxwing.com/)
 - [icons2](https://pnghdpro.com/)
 - [Convert png to webp](https://www.freeconvert.com/png-to-webp)
 - [Convert video to gif](https://ezgif.com/)
+
 
 ### Deployment
 

@@ -5,6 +5,7 @@ import {
   MdLightbulb,
   MdDashboard,
   MdEmail,
+  MdArticle,
 } from "react-icons/md";
 
 function NavButton({ icon, text, onClick, isActive }) {
@@ -70,12 +71,6 @@ export default function NavBar({ activeSection, onNavClick }) {
         <nav>
           <ul className="flex flex-row justify-center items-center md:flex-col">
             <NavButton
-              icon={<MdHome size={25} />}
-              text="Home"
-              onClick={() => onNavClick("home")}
-              isActive={activeSection === "home"}
-            />
-            <NavButton
               icon={<MdAccountCircle size={25} />}
               text="About"
               onClick={() => onNavClick("aboutMe")}
@@ -92,6 +87,12 @@ export default function NavBar({ activeSection, onNavClick }) {
               text="Projects"
               onClick={() => onNavClick("projects")}
               isActive={activeSection === "projects"}
+            />
+                         <NavButton
+              icon={<MdArticle size={25} />}
+              text="Blog"
+              onClick={() => onNavClick("blog")}
+              isActive={activeSection === "blog"}
             />
             <NavButton
               icon={<MdEmail size={25} />}

@@ -27,11 +27,33 @@ export default function ContactCard() {
       });
   };
 
+  const contactInfo = [
+    { label: "Email", value: "henrychung.dev@gmail.com", href: "mailto:henrychung.dev@gmail.com" },
+    { label: "Phone", value: "+1 778 322 3951", href: "tel:+17783223951" },
+    { label: "Location", value: "Burnaby, Canada" },
+  ];
+
   return (
     <>
       <h3 className="text-xl font-bold mb-4 text-indigo-500 border-b-2">
         Feel free to reach out!
       </h3>
+      
+      <div className="mb-6 space-y-2">
+        {contactInfo.map((item, index) => (
+          <div key={index} className="text-sm">
+            <span className="font-semibold text-gray-700">{item.label}: </span>
+            {item.href ? (
+              <a href={item.href} className="text-indigo-500 hover:underline">
+                {item.value}
+              </a>
+            ) : (
+              <span className="text-gray-600">{item.value}</span>
+            )}
+          </div>
+        ))}
+      </div>
+
       <form ref={form} onSubmit={sendEmail}>
         <label htmlFor="user_name" className="sr-only">
           Full Name
@@ -64,7 +86,7 @@ export default function ContactCard() {
           type="submit"
           className="w-full bg-[#60a5fa] text-white py-2 px-4 rounded hover:opacity-70 duration-100"
         >
-          Submit
+          Send
         </button>
       </form>
     </>
