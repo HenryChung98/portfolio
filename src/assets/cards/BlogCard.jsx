@@ -17,6 +17,8 @@ export default function Blog() {
         <a
           href="https://henrychung98.github.io/henry-blog/"
           className="font-bold text-blue-800 hover:text-blue-300 duration-200"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Go to Blog →
         </a>
