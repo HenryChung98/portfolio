@@ -29,7 +29,7 @@ export default function Blog() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {recentPosts.map((post) => (
           <a
-            key={post.slug}
+            key={post.id}
             href={`https://henrychung98.github.io${post.url}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -46,6 +46,7 @@ export default function Blog() {
                   year: "numeric",
                   month: "short",
                   day: "numeric",
+                  timeZone: "UTC",
                 })}
               </time>
               <div className="flex flex-wrap gap-2">
