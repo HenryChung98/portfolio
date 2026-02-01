@@ -27,9 +27,6 @@ export default function WebProjects() {
           "Reusable hooks and components for UI",
           "Responsive and scalable frontend-backend interactions",
         ]}
-        sourceCodeLink={
-          "https://www.figma.com/board/2dp3cNv1EhX42ZtKcvvpAj/crm-project?node-id=0-1&p=f&t=7AduMzPWX6jn3klP-0"
-        }
         moveLink={"https://henry-crm-project.vercel.app/"}
         accessMethod={"website"}
       />
@@ -94,20 +91,6 @@ export default function WebProjects() {
         moveLink={"https://csis3380-final.netlify.app/"}
         accessMethod={"website"}
         team
-      />
-      <DescBox
-        imgRatio={"landscape"}
-        imgPath={"/projectDescAssets/web/weatherAppBanner.webp"}
-        imgAlt={
-          "Banner for simple weather application built with JavaScript, allowing city search and weather information display"
-        }
-        title={"Weather App"}
-        skillIcons={["/Icons/javascript-icon.webp"]}
-        skillIconAlts={["js"]}
-        subTitle={"Simple weather application"}
-        descNum={2}
-        desc={["Search for a city and check the current weather", "See the location as well"]}
-        sourceCodeLink={"https://github.com/HenryChung98/weather-app"}
       />
     </>
   );
