@@ -1,8 +1,4 @@
-## Henry Portfolio
-
-Personal portfolio website showcasing projects, skills, and experience.
-Built for performance, accessibility, and clean UI.
-
+# Henry Portfolio
 
 ## Live
 [Henry Portfolio](https://henrychung98.github.io/henry-portfolio/)

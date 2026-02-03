@@ -13,7 +13,7 @@ export default function Blog() {
     <section>
       {/* Header */}
       <div className="flex items-center justify-between mb-4 border-b-2 pb-2">
-        <h3 className="text-xl font-bold">Blog Posts</h3>
+        <h3 className="text-xl font-bold">Blog</h3>
         <a
           href="https://henrychung98.github.io/henry-blog/"
           className="font-bold text-blue-800 hover:text-blue-300 duration-200"
