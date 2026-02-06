@@ -18,16 +18,15 @@ const getBannerPath = (path: string) => {
 
 <ProjectContainer
   imgPath={getBannerPath("poker-banner.webp")}
-  imgAlt="Banner for Poker Game, developed in Unity, Role: Tech Lead & Programmer"
-  title="Texas Hold'em Poker Game (Role: Lead Engineer)"
+  imgAlt="Poker game prototype with AI opponents for Software Engineering course team project"
+  title="Texas Hold'em Poker Prototype (Role: Lead Engineer)"
   skillIcons={[getIconPath("other/unity-game-engine-icon.webp"), getIconPath("language/csharp-icon.webp")]}
   skillIconAlts={["Unity Engine", "C#"]}
-  subTitle="Poker game with AI opponents for Software Engineering course team project"
-  descNum={3}
+  subTitle="Poker game prototype with AI opponents for Software Engineering course team project"
   desc={[
-    "Provide in-game poker hand reference guide and live odds estimation",
-    "Animate card dealing and turn marker transitions",
-    "Highlight winning hand combinations after showdown",
+    "Led 4-person Agile team, set coding standards and Git workflow to minimize conflicts",
+    "Built core game systems for turn validation, betting, and deck management",
+    "Designed interactive UI with animations and audio for enhanced engagement",
   ]}
   sourceCodeLink="https://github.com/HenryChung98/CMPT2276-POKER2"
   moveLink="https://9henrychung8.itch.io/prototype-texas-holdem-poker"
@@ -37,15 +36,14 @@ const getBannerPath = (path: string) => {
 
 <ProjectContainer
   imgPath={getBannerPath("game-jam-banner.webp")}
-  imgAlt="Speech Bubble Game Banner for platformer game, Role: Programmer"
+  imgAlt="Themed Bubble at the Vancouver Global Game Jam, featuring ability acquisition through interacting with speech bubbles"
   title="Speech Bubble Game (Role: Programmer)"
   skillIcons={[getIconPath("other/unity-game-engine-icon.webp"), getIconPath("language/csharp-icon.webp")]}
   skillIconAlts={["Unity Engine", "C#"]}
-  subTitle="Speech bubble platformer game themed 'Bubble' at the Vancouver Global Game Jam"
-  descNum={2}
+  subTitle="Themed Bubble at the Vancouver Global Game Jam, featuring ability acquisition through interacting with speech bubbles"
   desc={[
-    "Gain abilities by interacting with speech bubbles",
-    "Navigate through traps and obstacles",
+    "Implemented character movement and collision handling",
+    "Implemented actions that vary based on the acquired ability",
   ]}
   sourceCodeLink="https://github.com/mugwhump/GGJ2025-Paperless"
   team
@@ -53,24 +51,30 @@ const getBannerPath = (path: string) => {
 
 <ProjectContainer
   imgPath={getBannerPath("vr-game-banner.webp")}
-  imgAlt="Banner for VR Shooter game playable on Meta Quest Link, developed in Unreal Engine"
+  imgAlt="VR shooter playable on Meta Quest Link"
   title="VR Shooter Game"
   skillIcons={[getIconPath("other/unreal-engine-icon.webp")]}
   skillIconAlts={["Unreal Engine"]}
-  subTitle="VR shooter playable on Meta Quest Link headset"
-  descNum={3}
-  desc={["Intense shooting action", "dynamic hand animations", "Recall grabbable objects"]}
+  subTitle="VR shooter playable on Meta Quest Link"
+  desc={[
+    "Created intense shooting action with responsive controls using Niagara", 
+    "Implemented dynamic hand animations", 
+    "Implemented recall functionality for grabbable objects"
+  ]}
 />
 
 <ProjectContainer
   imgPath={getBannerPath("infinite-scroll-banner.webp")}
-  imgAlt="Banner for Infinite Scroll game with screen-spinning twists, developed in Unity and C#"
+  imgAlt="Screen-spinning twists and obstacle dodging, featuring challenging obstacles with increasing difficulty"
   title="Infinite Scroll Game"
   skillIcons={[getIconPath("other/unity-game-engine-icon.webp"), getIconPath("language/csharp-icon.webp")]}
   skillIconAlts={["Unity Engine", "C#"]}
-  subTitle="Endless game with screen-spinning twists and obstacle dodging"
-  descNum={2}
-  desc={["Endless gameplay", "Challenging obstacle"]}
+  subTitle="Screen-spinning twists and obstacle dodging, featuring challenging obstacles with increasing difficulty"
+  desc={[
+    "Organized obstacles and score objects into distinct classes for proper collision handling",
+    "Implemented context-based animation system",
+    "Added dynamic screen-spinning and rotation mechanics",
+  ]}
   sourceCodeLink="https://github.com/HenryChung98/RotationRush"
   moveLink="https://9henrychung8.itch.io/rotation-rush"
   accessMethod="playNow"
@@ -78,20 +82,22 @@ const getBannerPath = (path: string) => {
 
 <ProjectContainer
   imgPath={getBannerPath("mouse-accuracy-banner.webp")}
-  imgAlt="Banner for Mouse Accuracy Training game focusing on precision shooting and reaction time, developed in C++"
+  imgAlt="Focused on precision shooting and reaction time, a real-time interactive game built with SDL2"
   title="Mouse Accuracy Training"
-  skillIcons={[getIconPath("other/unity-game-engine-icon.webp"), getIconPath("language/csharp-icon.webp")]}
-  skillIconAlts={["Unity Engine", "C#"]}
-  subTitle="Mouse training for shooting games"
-  descNum={3}
-  desc={["Precision shooting drills", "Reaction time test", "or endless gameplay"]}
+  skillIcons={[getIconPath("language/cpp-icon.webp")]}
+  skillIconAlts={["C++"]}
+  subTitle="Focused on precision shooting and reaction time, a real-time interactive game built with SDL2"
+  desc={[ 
+    "Built state-based gameplay with multiple modes, scoring, and dynamic visuals",
+    "Integrated audio and text rendering",
+  ]}
   sourceCodeLink="https://github.com/HenryChung98/mouse-accuracy-training"
 />
 
 <ProjectContainer
   imgPath={getBannerPath("liar-game-banner.webp")}
   title="Liar Game"
-  imgAlt="Banner for Liar Game web application, simple psychological game developed in JavaScript"
+  imgAlt="Liar game application developed by JavaScript"
   skillIcons={[
     getIconPath("language/javascript-icon.webp"),
   ]}
@@ -99,10 +105,11 @@ const getBannerPath = (path: string) => {
     "JavaScript",
   ]}
   subTitle="Liar game application developed by JavaScript"
-  descNum={1}
   desc={[
-    "Simple psychological game",
+    "Designed a state-based game flow including setup, role reveal, and timed discussions",
+    "Built a mobile-friendly role reveal flow ensuring fair gameplay",
   ]}
+  sourceCodeLink="https://github.com/HenryChung98/liar-game"
   moveLink="https://henrychung98.github.io/liar-game/"
   accessMethod="playNow"
 />

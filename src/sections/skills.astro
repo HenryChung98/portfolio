@@ -36,7 +36,7 @@ const skills = {
     { iconPath: getIconPath("backend/drizzle-orm-icon.webp"), iconAlt: "Drizzle ORM" },
   ],
   devops: [
-    { iconPath: getIconPath("devops/aws-icon.webp"), iconAlt: "Amazon Web Services" },
+    { iconPath: getIconPath("devops/aws-icon.webp"), iconAlt: "AWS" },
     { iconPath: getIconPath("devops/oracle-icon.webp"), iconAlt: "Oracle Cloud" },
     { iconPath: getIconPath("devops/docker-icon.webp"), iconAlt: "Docker" },
     { iconPath: getIconPath("devops/git-icon.webp"), iconAlt: "Git" },
@@ -63,7 +63,7 @@ const sections = [
   <SectionTitle title={section.title} variant="secondary" />
    <ul class="grid grid-cols-3 md:flex md:flex-wrap md:gap-5 mb-16">
     {section.items.map((skill) => (
-      <li class="w-1/4 md:w-1/7 max-w-32 mb-0.5 md:mb-0">
+      <li class="w-1/4 md:w-1/7 max-w-32 mb-4 md:mb-0">
         <div class="flex flex-col gap-2 items-center w-26 h-26 md:w-30 md:h-30 justify-center 
         p-3 rounded-xl bg-background hover:scale-110 transition-all duration-200 border-1 border-primary/50">
           <img

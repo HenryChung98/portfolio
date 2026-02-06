@@ -6,22 +6,13 @@
 
 ## Tech Stack
 
-### Frameworks
-
 - [Astro](https://astro.build/)
 - [Tailwind](https://tailwindcss.com/docs/guides/create-react-app)
-
-### Libraries
-
-- Vanilla Particle.js(npm install @tsparticles/react, npm install @tsparticles/all)
 
 ## Features
 
 - Static & fast Astro build
 - Responsive design
-- Contact form with EmailJS
-- Animated background effects
-- Syntax-highlighted code sections
 
 ## Resources
 
@@ -30,7 +21,7 @@
 - [Convert png to webp](https://www.freeconvert.com/png-to-webp)
 - [Convert video to gif](https://ezgif.com/)
 
-### Deployment
+## Deployment
 
 - [Github Action](https://github.com/)
 

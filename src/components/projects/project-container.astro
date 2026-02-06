@@ -1,6 +1,4 @@
 ---
-import SectionTitle from "../section-title.astro";
-
 interface Props {
   // imgRatio: 'square' | 'landscape' | 'portrait';
   imgPath: string;
@@ -9,7 +7,6 @@ interface Props {
   skillIcons?: string[];
   skillIconAlts?: string[];
   subTitle: string;
-  descNum: number;
   desc: string[];
   sourceCodeLink?: string;
   moveLink?: string;
@@ -25,7 +22,6 @@ const {
   skillIcons = [],
   skillIconAlts = [],
   subTitle,
-  descNum,
   desc,
   sourceCodeLink = '',
   moveLink = '',
@@ -102,7 +98,7 @@ const accessMethodText = {
     </ul>
     
     <ul class="text-muted-foreground m-5 text-sm font-semibold space-y-2">
-      {desc.slice(0, descNum).map((item) => (
+      {desc.map((item) => (
         <li class="list-disc text-muted-foreground">
           <span class="leading-relaxed">{item}</span>
         </li>

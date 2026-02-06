@@ -2,11 +2,11 @@
 import { NAV_ITEMS } from "../consts";
 ---
 
-<header id="navbar" class="md:hidden fixed top-0 z-50 transition-transform duration-300">
+<header id="navbar" class="md:hidden fixed top-0 z-50 transition-transform duration-300 w-full">
   <nav>
     <ul class="flex justify-center items-center">
       {NAV_ITEMS.map((item) => (
-        <li class="nav-button md:rounded flex flex-col items-center justify-center w-20 h-20 bg-background duration-100 text-foreground hover:text-primary">
+        <li class="nav-button md:rounded flex flex-col items-center justify-center w-full min-w-20 h-20 bg-secondary/90 duration-200 text-foreground hover:text-primary">
           <a href={`#${item.id}`} class="flex flex-col items-center">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d={item.icon} />
