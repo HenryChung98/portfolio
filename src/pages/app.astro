@@ -7,7 +7,6 @@ import AboutMe from "../sections/about-me.astro";
 import Skills from "../sections/skills.astro";
 import Projects from "../sections/projects.astro";
 import Blog from "../sections/blog.astro";
-import Contact from "../sections/contact.astro";
 ---
 
 <div id="container">
@@ -16,22 +15,19 @@ import Contact from "../sections/contact.astro";
 		<div class="w-full md:w-[300px]">
 			<MainCard />
 		</div>
-		<div class="flex flex-col gap-5 m-4 md:m-12">
+		<div class="flex flex-col gap-5">
 			<SectionContainer id="about-me">
 				<AboutMe />
 			</SectionContainer>
-			<SectionContainer id="skills">
+			<SectionContainer id="skills" secondary>
 				<Skills />
 			</SectionContainer>
 			<SectionContainer id="projects">
 				<Projects />
 			</SectionContainer>
-			<SectionContainer id="blog">
+			<SectionContainer id="blog" secondary>
 				<Blog />
 			</SectionContainer>
-			<!-- <SectionContainer id="contact">
-				<Contact />
-			</SectionContainer> -->
 		</div>
 	</main>
 	<ScrollToTop />

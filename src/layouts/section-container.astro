@@ -2,14 +2,15 @@
 // SectionContainer.astro
 interface Props {
   id: string;
+  secondary?: boolean;
 }
 
-const { id } = Astro.props;
+const { id, secondary } = Astro.props;
 ---
 
 <section
   id={id}
-  class="md:min-w-3xl rounded-xl section-container text-foreground bg-primary/10 p-5 md:p-10 w-full max-w-full text-left opacity-0 translate-y-10 transition-all"
+  class={`md:min-w-3xl section-container text-foreground ${secondary && 'bg-secondary/50'} p-5 md:p-10 w-full max-w-full text-left opacity-0 translate-y-10 transition-all`}
 >
   <slot />
 </section>

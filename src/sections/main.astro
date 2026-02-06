@@ -38,7 +38,7 @@ const socialLinks = [
 
 ---
 
-<section id="home" class="md:sticky top-0 mt-24 md:mt-0 h-fit md:h-screen text-card-foreground bg-card rounded-xl md:rounded-none m-4 md:m-0 md:overflow-y-auto">
+<section id="home" class="md:sticky top-0 mt-24 md:mt-0 h-fit md:h-screen text-card-foreground bg-primary/20 rounded-xl md:rounded-none m-4 md:m-0 md:overflow-y-auto">
     <div class="flex flex-col gap-5 p-5">
         <img src={MainPicture.src} alt="main-picture" class="w-30 h-30 rounded-3xl mb-4" />
         <div>
@@ -90,7 +90,7 @@ const socialLinks = [
       <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d={link.icon} />
       </svg>
-      <span class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-muted text-muted-foreground text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+      <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-muted text-muted-foreground text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
         {link.label}
       </span>
     </a>

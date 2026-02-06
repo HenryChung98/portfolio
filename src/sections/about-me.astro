@@ -25,16 +25,14 @@ const certifications = [
   <SectionTitle title="Summary" variant="secondary" />
 
   <p class="mb-4 text-foreground/80">
-    I have completed a Computing Science diploma at Douglas College, with a strong foundation
+    Completed Computing Science diploma at Douglas College, with a strong foundation
     in computer science fundamentals.
   </p>
   <p class="mb-4 text-foreground/80">
-    I have solid experience building web applications using modern technologies such as
-    Next.js, TypeScript, and Tailwind CSS on the frontend, PostgreSQL and Drizzle ORM on the backend. 
+    Experienced in building modern web applications using Next.js, TypeScript, and Tailwind CSS on the frontend, and PostgreSQL with Drizzle ORM on the backend.
   </p>
   <p class="mb-4 text-foreground/80">
-    In addition to web development, I have experience in game development, using Unreal Engine
-    and C# with Unity.
+    Also have hands-on experience in game development using Unreal Engine and Unity with C#.
   </p>
   <!-- Through team-based projects, I contributed to implementing game
     mechanics and user interfaces while applying software engineering principles such as clear
@@ -45,16 +43,23 @@ const certifications = [
   <SectionTitle title="Work Experience" variant="secondary" />
   <div class="relative border-l-2 border-primary/30 pl-8 space-y-8">
     <!-- TODO: when theme is changed, manually change the color -->
-    <span class="absolute left-[-2px] top-0 h-[5px] w-[2px] bg-[#11190A] z-10" />
+    <span class="absolute left-[-2px] top-0 h-[5px] w-[2px] bg-background z-10" />
     {EXPERIENCES.map((exp) => (
       <div class="relative">
-        <div class="absolute -left-[41px] top-[5px] w-4 h-4 bg-primary rounded-full border-2 border-foreground/50"></div>
-        <h3 class="text-lg font-semibold text-foreground mb-1">{exp.title}</h3>
+        <div class="absolute -left-[41px] top-[5px] w-4 h-4 bg-primary rounded-full"></div>
+        <h3 class="text-lg font-semibold text-secondary-foreground mb-1">{exp.title}</h3>
         <p class="text-sm text-primary/80">{exp.company}</p>
         <p class="text-sm text-muted-foreground mb-3">{exp.period}</p>
         <ul class="list-disc text-muted-foreground pl-5">
-          {exp.responsibilities.map((item) => (
-            <li>{item}</li>
+          {exp.projects.map((project) => (
+            <li>
+              <p class="text-sm text-secondary-foreground mb-2">{project.name}</p>
+              <ul class="list-[circle] text-sm text-muted-foreground pl-5">
+                {project.responsibilities.map((item) => (
+                  <li class="mb-2">{item}</li>
+                ))}
+              </ul>
+            </li>
           ))}
         </ul>
       </div>

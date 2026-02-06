@@ -49,7 +49,7 @@ const accessMethodText = {
 
 <article class="border-l-4 mb-16 border-primary p-2 flex flex-col md:flex-row justify-around w-full md:gap-16">
     <div class="w-full relative inline-block group ">
-      <div class={`absolute top-2 z-10 text-white px-3 py-1 rounded-full text-sm border-2 border-gray-700 transition-transform duration-300 ${team ? 'bg-indigo-600' : 'bg-blue-500'}`}>
+      <div class={`absolute -top-7 left-1 text-white px-3 py-1 rounded-t-xl text-sm ${team ? 'bg-indigo-500' : 'bg-blue-500'}`}>
         {team ? 'Team' : 'Solo'}
       </div>
       <img
@@ -62,7 +62,7 @@ const accessMethodText = {
   
   <div class="w-full ml-3">
     <div class="flex flex-col">
-      <SectionTitle title={title} variant="secondary" />
+      <h4 class="text-xl text-secondary-foreground font-semibold mb-3 pb-1">{title}</h4>
       <div class="flex flex-wrap">
         {skillIcons.map((icon, index) => (
           <img
@@ -83,7 +83,7 @@ const accessMethodText = {
             href={sourceCodeLink}
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-primary/20 duration-200"
+            class="hover:text-primary/30 duration-200"
           >
             Source Code
           </a>
@@ -94,7 +94,7 @@ const accessMethodText = {
           href={moveLink}
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:text-primary/20 duration-200"
+          class="hover:text-primary/30 duration-200"
         >
           {accessMethodText[accessMethod]}
         </a>

@@ -64,13 +64,14 @@ const sections = [
    <ul class="grid grid-cols-3 md:flex md:flex-wrap md:gap-5 mb-16">
     {section.items.map((skill) => (
       <li class="w-1/4 md:w-1/7 max-w-32 mb-0.5 md:mb-0">
-        <div class="flex flex-col gap-2 items-center w-26 h-26 md:w-30 md:h-30 justify-center p-3 rounded-xl bg-foreground/80">
+        <div class="flex flex-col gap-2 items-center w-26 h-26 md:w-30 md:h-30 justify-center 
+        p-3 rounded-xl bg-background hover:scale-110 transition-all duration-200 border-1 border-primary/50">
           <img
             src={skill.iconPath}
             alt={skill.iconAlt}
             class="w-12 h-12 md:w-16 md:h-16"
           />
-          <span class="text-xs text-background text-center">
+          <span class="text-xs text-foreground text-center">
             {skill.iconAlt}
           </span>
         </div>

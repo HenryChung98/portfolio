@@ -15,7 +15,7 @@ const tabs = [
       <li class="inline-block w-20 text-center">
         <button
           data-tab={tab.id}
-          class="tab-button duration-100 px-3 py-1 w-20 rounded-full mb-1"
+          class="tab-button duration-100 px-3 py-1 w-20 rounded-full mb-1 border border-primary/50"
         >
           {tab.label}
         </button>
@@ -39,8 +39,10 @@ const tabs = [
     buttons.forEach((btn) => {
       if (btn.getAttribute('data-tab') === tabId) {
         btn.classList.add('bg-primary', 'text-primary-foreground');
+        btn.classList.remove('hover:bg-primary/20', 'duration-200');
       } else {
         btn.classList.remove('bg-primary', 'text-primary-foreground');
+        btn.classList.add('hover:bg-primary/20', 'duration-200');
       }
     });
 
