@@ -1,0 +1,54 @@
+---
+import SectionTitle from "../components/section-title.astro";
+
+interface Post {
+  url: string;
+  title: string;
+  description: string;
+  pubDate: string;
+  categories: string[];
+}
+
+const response = await fetch("https://henrychung98.github.io/henry-blog/api/recent-posts.json");
+const recentPosts: Post[] = await response.json();
+---
+
+<SectionTitle title="Blog" />
+
+  <!-- Recent label -->
+  <p class="text-sm font-semibold mb-3">Recent Posts</p>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {recentPosts.map((post: Post) => (
+      <a
+        href={`https://henrychung98.github.io${post.url}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block h-full rounded-xl border border-primary/50 p-6 transition sm:p-4 hover:bg-primary/10"
+      >
+        <h4 class="mb-2 text-lg font-bold text-foreground group-hover:text-primary duration-200">
+          {post.title}
+        </h4>
+
+        <p class="mb-4 text-sm leading-relaxed text-foreground/80">{post.description}</p>
+        <div class="flex items-center gap-2">
+          <time class="text-xs text-muted-foreground">
+            {new Date(post.pubDate).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+              timeZone: "UTC",
+            })}
+          </time>
+          <div class="flex flex-wrap gap-2">
+            {post.categories[0] && (
+              <span class="bg-muted rounded-xl px-2 py-1 text-xs text-muted-foreground">
+                {post.categories[0]}
+              </span>
+            )}
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>

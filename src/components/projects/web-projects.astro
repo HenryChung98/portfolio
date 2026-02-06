@@ -1,0 +1,101 @@
+---
+import ProjectContainer from "./project-container.astro";
+
+const iconModules = import.meta.glob<{ default: ImageMetadata }>('../../assets/icons/**/*.webp', { eager: true });
+const bannerModules = import.meta.glob<{ default: ImageMetadata }>('../../assets/project-banners/web/**/*.webp', { eager: true });
+
+const getIconPath = (path: string) => {
+  const fullPath = `../../assets/icons/${path}`;
+  return iconModules[fullPath]?.default?.src || '';
+};
+
+const getBannerPath = (path: string) => {
+  const fullPath = `../../assets/project-banners/web/${path}`;
+  return bannerModules[fullPath]?.default?.src || '';
+};
+---
+
+<ProjectContainer
+  imgPath={getBannerPath("crm-application.webp")}
+  title="CRM Application (Ongoing)"
+  imgAlt="Banner for multi-organization CRM web application using Next.js, TypeScript, Supabase, and Tailwind CSS"
+  skillIcons={[
+    getIconPath("frontend/tanstack-query-icon.webp"),
+    getIconPath("frontend/shadcn-ui-icon.webp"),
+    getIconPath("frontend/nextjs-icon.webp"),
+    getIconPath("backend/supabase-icon.webp"),
+    getIconPath("backend/postgresql-icon.webp"),
+    getIconPath("language/typescript-icon.webp"),
+    getIconPath("frontend/tailwind-css-icon.webp"),
+  ]}
+  skillIconAlts={[
+    "tanstack",
+    "shadcn",
+    "nextjs",
+    "supabase",
+    "postgresql",
+    "typescript",
+    "tailwind",
+  ]}
+  subTitle="Multi-organization CRM Web Application"
+  descNum={3}
+  desc={[
+    "User management across multiple organizations",
+    "Reusable hooks and components for UI",
+    "Responsive and scalable frontend-backend interactions",
+  ]}
+  moveLink="https://henry-crm-project.vercel.app/"
+  accessMethod="website"
+/>
+
+<ProjectContainer
+  imgPath={getBannerPath("quick-docx-banner.webp")}
+  title="Quick Docx (Active)"
+  imgAlt="Banner for docx editor using Next.js, TypeScript, Supabase, and Tailwind CSS"
+  skillIcons={[
+    getIconPath("devops/oracle-icon.webp"),
+    getIconPath("devops/docker-icon.webp"),
+    getIconPath("frontend/shadcn-ui-icon.webp"),
+    getIconPath("frontend/nextjs-icon.webp"),
+    getIconPath("language/typescript-icon.webp"),
+    getIconPath("frontend/tailwind-css-icon.webp"),
+  ]}
+  skillIconAlts={[
+    "oracle",
+    "docker",
+    "shadcn",
+    "nextjs",
+    "typescript",
+    "tailwind",
+  ]}
+  subTitle="Docx Template Editor"
+  descNum={2}
+  desc={[
+     "DOCX template editor with dynamic placeholder replacement",
+     "PDF export using Gotenberg (Docker-based conversion)",
+  ]}
+  moveLink="https://quick-docx.vercel.app/"
+  accessMethod="website"
+/>
+<ProjectContainer
+  imgPath={getBannerPath("auction-banner.webp")}
+  title="Auction Website(Role: Backend)"
+  imgAlt="Banner for auction platform website developed for competitive bidding, backend role using Next.js, JavaScript, and MongoDB"
+  skillIcons={[
+    getIconPath("frontend/nextjs-icon.webp"),
+    getIconPath("backend/mongodb-icon.webp"),
+    getIconPath("language/javascript-icon.webp"),
+  ]}
+  skillIconAlts={[
+    "next.js",
+    "mongoDB",
+    "JavaScript",
+  ]}
+  subTitle="Competitive bidding platform built for Full-Stack Development course team project"
+  descNum={1}
+  desc={[
+    "An intuitive auction platform built to simplify bidding",
+  ]}
+  moveLink="https://csis3380-final.netlify.app/"
+  accessMethod="website"
+/>

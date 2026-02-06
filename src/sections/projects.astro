@@ -1,0 +1,64 @@
+---
+import SectionTitle from "../components/section-title.astro";
+import WebProjects from "../components/projects/web-projects.astro";
+import GameProjects from "../components/projects/game-projects.astro";
+
+const tabs = [
+  { id: 'web', label: 'Web' },
+  { id: 'game', label: 'Game' },
+];
+---
+
+<SectionTitle title="Projects" />
+  <ul class="flex justify-center gap-4 mb-6 md:mb-12">
+    {tabs.map((tab) => (
+      <li class="inline-block w-20 text-center">
+        <button
+          data-tab={tab.id}
+          class="tab-button duration-100 px-3 py-1 w-20 rounded-full mb-1"
+        >
+          {tab.label}
+        </button>
+      </li>
+    ))}
+  </ul>
+<div class="flex flex-col">
+  <div data-content="web" class="tab-content">
+    <WebProjects />
+  </div>
+  <div data-content="game" class="tab-content hidden">
+    <GameProjects />
+  </div>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+
+  function setActiveTab(tabId: string) {
+    buttons.forEach((btn) => {
+      if (btn.getAttribute('data-tab') === tabId) {
+        btn.classList.add('bg-primary', 'text-primary-foreground');
+      } else {
+        btn.classList.remove('bg-primary', 'text-primary-foreground');
+      }
+    });
+
+    contents.forEach((content) => {
+      if (content.getAttribute('data-content') === tabId) {
+        content.classList.remove('hidden');
+      } else {
+        content.classList.add('hidden');
+      }
+    });
+  }
+
+  setActiveTab('web');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const tabId = button.getAttribute('data-tab');
+      if (tabId) setActiveTab(tabId);
+    });
+  });
+</script>

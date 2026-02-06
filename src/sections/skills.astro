@@ -1,0 +1,81 @@
+---
+// Icon size: 72px
+// tanstack, drizzle, antigravity are not 72px
+import SectionTitle from "../components/section-title.astro";
+const iconModules = import.meta.glob<{ default: ImageMetadata }>('../assets/icons/**/*.webp', { eager: true });
+
+
+const getIconPath = (path: string) => {
+  const fullPath = `../assets/icons/${path}`;
+  return iconModules[fullPath]?.default?.src || '';
+};
+
+const skills = {
+  languages: [
+   { iconPath: getIconPath("language/typescript-icon.webp"), iconAlt: "TypeScript" },
+    { iconPath: getIconPath("language/javascript-icon.webp"), iconAlt: "JavaScript" },
+    { iconPath: getIconPath("language/python-icon.webp"), iconAlt: "Python" },
+    { iconPath: getIconPath("language/cpp-icon.webp"), iconAlt: "C++" },
+    { iconPath: getIconPath("language/csharp-icon.webp"), iconAlt: "C#" },
+  ],
+  frontend: [
+    { iconPath: getIconPath("frontend/react-icon.webp"), iconAlt: "React" },
+    { iconPath: getIconPath("frontend/nextjs-icon.webp"), iconAlt: "Next.js" },
+    { iconPath: getIconPath("frontend/tanstack-query-icon.webp"), iconAlt: "Tanstack Query" },
+    { iconPath: getIconPath("frontend/tailwind-css-icon.webp"), iconAlt: "TailwindCSS" },
+    { iconPath: getIconPath("frontend/shadcn-ui-icon.webp"), iconAlt: "Shadcn UI" },
+    { iconPath: getIconPath("frontend/astro-icon.webp"), iconAlt: "Astro" },
+    { iconPath: getIconPath("frontend/threejs-icon.webp"), iconAlt: "Three.js" },
+  ],
+  backend: [
+    { iconPath: getIconPath("backend/node-js-icon.webp"), iconAlt: "Node.js" },
+    { iconPath: getIconPath("backend/supabase-icon.webp"), iconAlt: "Supabase" },
+    { iconPath: getIconPath("backend/postgresql-icon.webp"), iconAlt: "PostgreSQL" },
+    { iconPath: getIconPath("backend/mysql-icon.webp"), iconAlt: "MySQL" },
+    { iconPath: getIconPath("backend/mongodb-icon.webp"), iconAlt: "MongoDB" },
+    { iconPath: getIconPath("backend/drizzle-orm-icon.webp"), iconAlt: "Drizzle ORM" },
+  ],
+  devops: [
+    { iconPath: getIconPath("devops/aws-icon.webp"), iconAlt: "Amazon Web Services" },
+    { iconPath: getIconPath("devops/oracle-icon.webp"), iconAlt: "Oracle Cloud" },
+    { iconPath: getIconPath("devops/docker-icon.webp"), iconAlt: "Docker" },
+    { iconPath: getIconPath("devops/git-icon.webp"), iconAlt: "Git" },
+  ],
+  other: [
+    { iconPath: getIconPath("other/figma-icon.webp"), iconAlt: "Figma" },
+    { iconPath: getIconPath("other/unity-game-engine-icon.webp"), iconAlt: "Unity Engine" },
+    { iconPath: getIconPath("other/unreal-engine-icon.webp"), iconAlt: "Unreal Engine" },
+  ],
+};
+
+const sections = [
+  { title: "Languages", items: skills.languages },
+  { title: "Frontend", items: skills.frontend },
+  { title: "Backend & Database", items: skills.backend },
+  { title: "Cloud & DevOps", items: skills.devops },
+  { title: "Other Tools", items: skills.other },
+];
+---
+
+<SectionTitle title="Skills" />
+{sections.map((section) => (
+ <div>
+  <SectionTitle title={section.title} variant="secondary" />
+   <ul class="grid grid-cols-3 md:flex md:flex-wrap md:gap-5 mb-16">
+    {section.items.map((skill) => (
+      <li class="w-1/4 md:w-1/7 max-w-32 mb-0.5 md:mb-0">
+        <div class="flex flex-col gap-2 items-center w-26 h-26 md:w-30 md:h-30 justify-center p-3 rounded-xl bg-foreground/80">
+          <img
+            src={skill.iconPath}
+            alt={skill.iconAlt}
+            class="w-12 h-12 md:w-16 md:h-16"
+          />
+          <span class="text-xs text-background text-center">
+            {skill.iconAlt}
+          </span>
+        </div>
+      </li>
+    ))}
+  </ul>
+</div>
+))}

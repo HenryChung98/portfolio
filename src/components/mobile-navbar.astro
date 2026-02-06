@@ -1,0 +1,46 @@
+---
+import { NAV_ITEMS } from "../consts";
+---
+
+<header id="navbar" class="md:hidden fixed top-0 z-50 transition-transform duration-300">
+  <nav>
+    <ul class="flex justify-center items-center">
+      {NAV_ITEMS.map((item) => (
+        <li class="nav-button md:rounded flex flex-col items-center justify-center w-20 h-20 bg-background duration-100 text-foreground hover:text-primary">
+          <a href={`#${item.id}`} class="flex flex-col items-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d={item.icon} />
+            </svg>
+            <span class="text-xs uppercase p-1">{item.text}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  import { setupNavigation } from '../navigation';
+  
+  setupNavigation();
+  
+  let lastScrollY = 0;
+  let ticking = false;
+  const navbar = document.getElementById('navbar');
+
+  function handleScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        if (Math.abs(currentScrollY - lastScrollY) > 50) {
+          navbar?.classList.toggle('-translate-y-full', currentScrollY > lastScrollY);
+          lastScrollY = currentScrollY;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+</script>

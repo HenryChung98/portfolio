@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string;
+  variant?: 'default' | 'secondary';
+}
+
+const { title, variant = 'default' } = Astro.props;
+
+const styles = {
+  default: "text-2xl text-primary font-bold mb-4 border-b-2 pb-2",
+  secondary: "text-xl text-primary font-semibold mb-3 pb-1"
+};
+---
+
+<h3 class={styles[variant]}>{title}</h3>

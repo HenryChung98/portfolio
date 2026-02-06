@@ -1,0 +1,38 @@
+---
+import SectionContainer from "../layouts/section-container.astro";
+import NavBar from "../components/mobile-navbar.astro";
+import ScrollToTop from "../components/scroll-to-top.astro";
+import MainCard from "../sections/main.astro";
+import AboutMe from "../sections/about-me.astro";
+import Skills from "../sections/skills.astro";
+import Projects from "../sections/projects.astro";
+import Blog from "../sections/blog.astro";
+import Contact from "../sections/contact.astro";
+---
+
+<div id="container">
+	<NavBar />
+	<main class="flex flex-col md:flex-row justify-center">
+		<div class="w-full md:w-[300px]">
+			<MainCard />
+		</div>
+		<div class="flex flex-col gap-5 m-4 md:m-12">
+			<SectionContainer id="about-me">
+				<AboutMe />
+			</SectionContainer>
+			<SectionContainer id="skills">
+				<Skills />
+			</SectionContainer>
+			<SectionContainer id="projects">
+				<Projects />
+			</SectionContainer>
+			<SectionContainer id="blog">
+				<Blog />
+			</SectionContainer>
+			<!-- <SectionContainer id="contact">
+				<Contact />
+			</SectionContainer> -->
+		</div>
+	</main>
+	<ScrollToTop />
+</div>

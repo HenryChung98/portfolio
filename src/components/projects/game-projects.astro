@@ -1,0 +1,108 @@
+---
+import ProjectContainer from "./project-container.astro";
+
+const iconModules = import.meta.glob<{ default: ImageMetadata }>('../../assets/icons/**/*.webp', { eager: true });
+const bannerModules = import.meta.glob<{ default: ImageMetadata }>('../../assets/project-banners/game/**/*.webp', { eager: true });
+
+const getIconPath = (path: string) => {
+  const fullPath = `../../assets/icons/${path}`;
+  return iconModules[fullPath]?.default?.src || '';
+};
+
+const getBannerPath = (path: string) => {
+  const fullPath = `../../assets/project-banners/game/${path}`;
+  return bannerModules[fullPath]?.default?.src || '';
+};
+---
+
+
+<ProjectContainer
+  imgPath={getBannerPath("poker-banner.webp")}
+  imgAlt="Banner for Poker Game, developed in Unity, Role: Tech Lead & Programmer"
+  title="Texas Hold'em Poker Game (Role: Lead Engineer)"
+  skillIcons={[getIconPath("other/unity-game-engine-icon.webp"), getIconPath("language/csharp-icon.webp")]}
+  skillIconAlts={["Unity Engine", "C#"]}
+  subTitle="Poker game with AI opponents for Software Engineering course team project"
+  descNum={3}
+  desc={[
+    "Provide in-game poker hand reference guide and live odds estimation",
+    "Animate card dealing and turn marker transitions",
+    "Highlight winning hand combinations after showdown",
+  ]}
+  sourceCodeLink="https://github.com/HenryChung98/CMPT2276-POKER2"
+  moveLink="https://9henrychung8.itch.io/prototype-texas-holdem-poker"
+  accessMethod="playNow"
+  team
+/>
+
+<ProjectContainer
+  imgPath={getBannerPath("game-jam-banner.webp")}
+  imgAlt="Speech Bubble Game Banner for platformer game, Role: Programmer"
+  title="Speech Bubble Game (Role: Programmer)"
+  skillIcons={[getIconPath("other/unity-game-engine-icon.webp"), getIconPath("language/csharp-icon.webp")]}
+  skillIconAlts={["Unity Engine", "C#"]}
+  subTitle="Speech bubble platformer game themed 'Bubble' at the Vancouver Global Game Jam"
+  descNum={2}
+  desc={[
+    "Gain abilities by interacting with speech bubbles",
+    "Navigate through traps and obstacles",
+  ]}
+  sourceCodeLink="https://github.com/mugwhump/GGJ2025-Paperless"
+  team
+/>
+
+<ProjectContainer
+  imgPath={getBannerPath("vr-game-banner.webp")}
+  imgAlt="Banner for VR Shooter game playable on Meta Quest Link, developed in Unreal Engine"
+  title="VR Shooter Game"
+  skillIcons={[getIconPath("other/unreal-engine-icon.webp")]}
+  skillIconAlts={["unreal-engine"]}
+  subTitle="VR shooter playable on Meta Quest Link headset"
+  descNum={3}
+  desc={["Intense shooting action", "dynamic hand animations", "Recall grabbable objects"]}
+/>
+
+<ProjectContainer
+  imgPath={getBannerPath("infinite-scroll-banner.webp")}
+  imgAlt="Banner for Infinite Scroll game with screen-spinning twists, developed in Unity and C#"
+  title="Infinite Scroll Game"
+  skillIcons={[getIconPath("other/unity-game-engine-icon.webp"), getIconPath("language/csharp-icon.webp")]}
+  skillIconAlts={["unity-game-engine", "csharp"]}
+  subTitle="Endless game with screen-spinning twists and obstacle dodging"
+  descNum={2}
+  desc={["Endless gameplay", "Challenging obstacle"]}
+  sourceCodeLink="https://github.com/HenryChung98/RotationRush"
+  moveLink="https://9henrychung8.itch.io/rotation-rush"
+  accessMethod="playNow"
+/>
+
+<ProjectContainer
+  imgPath={getBannerPath("mouse-accuracy-banner.webp")}
+  imgAlt="Banner for Mouse Accuracy Training game focusing on precision shooting and reaction time, developed in C++"
+  title="Mouse Accuracy Training"
+  skillIcons={[getIconPath("other/unity-game-engine-icon.webp"), getIconPath("language/csharp-icon.webp")]}
+  skillIconAlts={["unity-game-engine", "csharp"]}
+  subTitle="Mouse training for shooting games"
+  descNum={3}
+  desc={["Precision shooting drills", "Reaction time test", "or endless gameplay"]}
+  sourceCodeLink="https://github.com/HenryChung98/mouse-accuracy-training"
+/>
+
+<ProjectContainer
+  imgPath={getBannerPath("liar-game-banner.webp")}
+  title="Liar Game"
+  imgAlt="Banner for Liar Game web application, simple psychological game developed in JavaScript"
+  skillIcons={[
+    getIconPath("language/javascript-icon.webp"),
+  ]}
+  skillIconAlts={[
+    "javascript",
+  ]}
+  subTitle="Liar game application developed by JavaScript"
+  descNum={1}
+  desc={[
+    "Simple psychological game",
+  ]}
+  moveLink="https://henrychung98.github.io/liar-game/"
+  accessMethod="playNow"
+/>

@@ -1,24 +1,13 @@
+// @ts-check
 import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
+
 import tailwindcss from "@tailwindcss/vite";
 
+// https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
-  base: "/henry-portfolio/",
-  server: {
-    host: true,
-  },
+  site: "https://henrychung98.github.io",
+  base: "/henry-portfolio",
   vite: {
     plugins: [tailwindcss()],
-    build: {
-      rollupOptions: {
-        output: {
-          manualChunks: undefined,
-        },
-      },
-    },
-    resolve: {
-      extensions: [".js", ".jsx", ".ts", ".tsx"],
-    },
   },
 });

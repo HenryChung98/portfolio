@@ -1,0 +1,83 @@
+---
+import SectionTitle from "../components/section-title.astro";
+import AWSCertAI from "../assets/icons/certificate/aws-certified-ai-practitioner.webp";
+import AWSCertCloud from "../assets/icons/certificate/aws-certified-cloud-practitioner.webp";
+import { EXPERIENCES } from "../consts";
+
+const certifications = [
+  {
+    iconPath: AWSCertAI.src,
+    iconAlt: "aws-certified-ai-practitioner",
+    issueDate: "July 2025",
+    expiryDate: "Expires July 2028"
+  },
+  {
+    iconPath: AWSCertCloud.src,
+    iconAlt: "aws-certified-cloud-practitioner",
+    issueDate: "June 2025",
+    expiryDate: "Expires June 2028"
+  }
+];
+---
+
+<article class="mb-16">
+  <SectionTitle title="About Me" />
+  <SectionTitle title="Summary" variant="secondary" />
+
+  <p class="mb-4 text-foreground/80">
+    I have completed a Computing Science diploma at Douglas College, with a strong foundation
+    in computer science fundamentals.
+  </p>
+  <p class="mb-4 text-foreground/80">
+    I have solid experience building web applications using modern technologies such as
+    Next.js, TypeScript, and Tailwind CSS on the frontend, PostgreSQL and Drizzle ORM on the backend. 
+  </p>
+  <p class="mb-4 text-foreground/80">
+    In addition to web development, I have experience in game development, using Unreal Engine
+    and C# with Unity.
+  </p>
+  <!-- Through team-based projects, I contributed to implementing game
+    mechanics and user interfaces while applying software engineering principles such as clear
+    architecture, high cohesion, low coupling, and continuous refactoring -->
+</article>
+
+<article class="mb-16">
+  <SectionTitle title="Work Experience" variant="secondary" />
+  <div class="relative border-l-2 border-primary/30 pl-8 space-y-8">
+    <!-- TODO: when theme is changed, manually change the color -->
+    <span class="absolute left-[-2px] top-0 h-[5px] w-[2px] bg-[#11190A] z-10" />
+    {EXPERIENCES.map((exp) => (
+      <div class="relative">
+        <div class="absolute -left-[41px] top-[5px] w-4 h-4 bg-primary rounded-full border-2 border-foreground/50"></div>
+        <h3 class="text-lg font-semibold text-foreground mb-1">{exp.title}</h3>
+        <p class="text-sm text-primary/80">{exp.company}</p>
+        <p class="text-sm text-muted-foreground mb-3">{exp.period}</p>
+        <ul class="list-disc text-muted-foreground pl-5">
+          {exp.responsibilities.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</article>
+
+
+<article class="mb-16">
+  <SectionTitle title="Certifications" variant="secondary" />
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  {certifications.map((cert) => (
+    <div class="border-l-4 border-primary p-6 flex items-center gap-6 transition-colors">
+      <img
+        src={cert.iconPath}
+        alt={cert.iconAlt}
+        class="w-20 md:w-24"
+      />
+      <div class="flex-1">
+        <p class="text-sm text-foreground/80 font-medium mb-1">{cert.issueDate}</p>
+        <p class="text-sm text-muted-foreground">{cert.expiryDate}</p>
+      </div>
+    </div>
+  ))}
+</div>
+</article>
