@@ -1,13 +1,7 @@
-/* 
-title : primary
-subtitle : primary
-paragraph : foreground/80
-meta: muted-foreground
-*/
-
 export const PROFILE = {
   name: "Henry Chung",
-  description: "Software Engineer",
+  title: "Software Engineer",
+  description: "Henry Chung | Software Engineer",
   avatar: "/portfolio/logo.webp",
   email: "henrychung.dev@gmail.com",
   phone: "+1 778 322 3951",
@@ -17,6 +11,17 @@ export const PROFILE = {
   linkedin: "https://www.linkedin.com/in/henry-chung-cs",
   itchio: "https://9henrychung8.itch.io",
   blog: "https://henrychung98.github.io/blog",
+  og: {
+    title: "Henry Chung - Software Engineer",
+    description:
+      "Henry Chung is a Software Engineer specializing in TypeScript/Next.js for full-stack web applications. Experience building SaaS products with role-based access control and API optimization. View his projects, skills, and experience in modern development.",
+    image: "/portfolio/logo.webp",
+    imageAlt: "Henry Chung - Software Engineer",
+    url: "https://henrychung98.github.io/portfolio",
+    type: "website",
+    siteName: "Henry Chung",
+    locale: "en_CA",
+  },
 };
 
 export const NAV_ITEMS = [

@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import NavBar from '../components/mobile-navbar.astro';
+import { PROFILE } from '../consts';
 ---
 
 <!doctype html>
@@ -11,11 +11,11 @@ import NavBar from '../components/mobile-navbar.astro';
 		<link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
 		<link rel="icon" href="/portfolio/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-    	<title>Henry Chung | Software Engineer</title>
+    	<title>{PROFILE.title}</title>
 
 		 <meta
       name="description"
-      content="Henry Chung is a Software Engineer specializing in Next.js, Supabase, and TypeScript for web development, and Unity, Unreal Enginer for game development. View his projects, skills, and experience in modern development."
+      content={PROFILE.description}
     />
     <meta
       name="keywords"
@@ -25,21 +25,25 @@ import NavBar from '../components/mobile-navbar.astro';
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph tags -->
-    <meta property="og:title" content="Henry Chung | Software Engineer" />
+    <meta property="og:title" content={PROFILE.og.title} />
     <meta
       property="og:description"
-      content="Software Engineer specializing in Next.js, Supabase, and TypeScript for web development, and Unity, Unreal Enginer for game development. View his projects, skills, and experience in modern development."
+      content={PROFILE.og.description}
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={PROFILE.og.type} />
     <meta
       property="og:url"
-      content="https://henrychung98.github.io/portfolio/"
+      content={PROFILE.og.url}
     />
     <meta
       property="og:image"
-      content="https://henrychung98.github.io/portfolio/logo-png.png"
+      content={PROFILE.og.image}
     />
-    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:image:alt"
+      content={PROFILE.og.imageAlt}
+    />
+    <meta property="og:locale" content={PROFILE.og.locale} />
 
     <!-- poppins font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,13 +62,19 @@ import NavBar from '../components/mobile-navbar.astro';
         "jobTitle": "Software Engineer",
         "sameAs": [
           "https://github.com/HenryChung98",
-          "https://www.linkedin.com/in/henry-chung-cs/"
+          "https://www.linkedin.com/in/henry-chung-cs/",
+          "https://henrychung98.github.io/blog"
         ],
         "knowsAbout": [
+          "JavaScript",
           "TypeScript",
           "React",
           "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Docker",
           "Supabase",
+          "Oracle",
           "AWS",
           "Git",
           "Unity",
@@ -74,7 +84,7 @@ import NavBar from '../components/mobile-navbar.astro';
           {
             "@type": "CreativeWork",
             "name": "CRM Web Application",
-            "description": "A SaaS CRM system built with Next.js and Supabase."
+            "description": "A SaaS CRM system built with Next.js, TypeScript and PostgreSQL."
           },
           {
             "@type": "CreativeWork",
