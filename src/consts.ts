@@ -8,7 +8,7 @@ meta: muted-foreground
 export const PROFILE = {
   name: "Henry Chung",
   description: "Software Engineer",
-  avatar: "/henry-portfolio/logo.webp",
+  avatar: "/portfolio/logo.webp",
   email: "henrychung.dev@gmail.com",
   phone: "+1 778 322 3951",
   location: "Burnaby, Canada",
@@ -16,7 +16,7 @@ export const PROFILE = {
   instagram: "https://www.instagram.com/_henrychung",
   linkedin: "https://www.linkedin.com/in/henry-chung-cs",
   itchio: "https://9henrychung8.itch.io",
-  blog: "https://henrychung98.github.io/henry-blog",
+  blog: "https://henrychung98.github.io/blog",
 };
 
 export const NAV_ITEMS = [
@@ -45,17 +45,16 @@ export const NAV_ITEMS = [
 
 export const EXPERIENCES = [
   {
-    title: "Full Stack Developer (Volunteer)",
+    title: "Software Developer (Volunteer)",
     period: "Feb 2026 - Present",
     company: "Evernorth Foundation",
     projects: [
       {
         name: "Non-profit Website Redesign",
         responsibilities: [
-          "Led frontend team of 4 developers to rebuild non-profit website serving senior community",
-          "Defined frontend architecture, component structure, and code quality standards for React-based application",
-          "Established responsive design implementation and accessibility compliance for senior users",
-          "Coordinated with UX lead and backend team to ensure seamless integration and consistent user experience",
+          "Led frontend team of 4 developers, owned overall frontend architecture and code quality",
+          "Ensured responsive design and consistent implementation across devices",
+          "Coordinated with UX lead and backend team to ensure seamless integration",
         ],
       },
     ],
@@ -69,7 +68,7 @@ export const EXPERIENCES = [
         name: "Cypher RLHF",
         responsibilities: [
           "Designed and evaluated prompts for code generation, testing, refactoring, and solution reasoning tasks",
-          "Assessed LLM outputs for instruction-following, truthfulness, localization, writing style, and verbosity as part of a RLHF pipeline",
+          "Assessed LLM outputs for instruction-following, truthfulness, localization, writing style, and verbosity",
           "Conducted peer reviews to ensure quality standards and guideline consistency across team deliverables",
         ],
       },

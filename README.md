@@ -2,7 +2,7 @@
 
 ## Live
 
-[Henry Portfolio](https://henrychung98.github.io/henry-portfolio/)
+[Henry Portfolio](https://henrychung98.github.io/portfolio/)
 
 ## Tech Stack
 
