@@ -9,7 +9,6 @@ import { PROFILE } from '../consts';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
-		<link rel="icon" href="/portfolio/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
     	<title>{PROFILE.title}</title>
 
@@ -17,12 +16,8 @@ import { PROFILE } from '../consts';
       name="description"
       content={PROFILE.description}
     />
-    <meta
-      name="keywords"
-      content="Henry Chung, Portfolio, Software Engineer, Web Development, Game Development, Next.js, Supabase, TypeScript, React, Full Stack, SaaS, CRM, Unity, Unreal Engine"
-    />
     <meta name="author" content="Henry Chung" />
-    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#d7d7da" />
 
     <!-- Open Graph tags -->
     <meta property="og:title" content={PROFILE.og.title} />
@@ -49,7 +44,7 @@ import { PROFILE } from '../consts';
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -70,27 +65,7 @@ import { PROFILE } from '../consts';
           "TypeScript",
           "React",
           "Next.js",
-          "Node.js",
-          "PostgreSQL",
-          "Docker",
-          "Supabase",
-          "Oracle",
-          "AWS",
-          "Git",
-          "Unity",
-          "UnrealEngine"
-        ],
-        "hasPart": [
-          {
-            "@type": "CreativeWork",
-            "name": "CRM Web Application",
-            "description": "A SaaS CRM system built with Next.js, TypeScript and PostgreSQL."
-          },
-          {
-            "@type": "CreativeWork",
-            "name": "Game Projects",
-            "description": "Interactive games built with Unity and Unreal Engine, demonstrating 2D/3D graphics, gameplay mechanics, and performance optimization."
-          }
+          "PostgreSQL"
         ]
       }
     </script>
