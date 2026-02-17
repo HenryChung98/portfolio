@@ -13,19 +13,19 @@
     oklch(0.141 0.005 285.823) 100%
   ); */
 
---background: oklch(0.95 0.002 286.3);
---foreground: oklch(0.2 0.005 285.823);
---card: oklch(0.93 0.002 286.3);
---card-foreground: oklch(0.25 0.005 285.823);
---primary: oklch(0.6 0.18 131.684);
---primary-foreground: oklch(0.98 0.01 131.684);
---secondary: oklch(0.88 0.004 286.32);
---secondary-foreground: oklch(0.25 0.006 285.885);
---muted: oklch(0.92 0.002 286.3);
---muted-foreground: oklch(0.5 0.012 285.9);
---border: oklch(0.88 0.004 286.32);
---input: oklch(0.88 0.004 286.32);
---ring: oklch(0.7 0.2 128.85);
+  --background: oklch(0.95 0.002 286.3);
+  --foreground: oklch(0.2 0.005 285.823);
+  --card: oklch(0.93 0.002 286.3);
+  --card-foreground: oklch(0.25 0.005 285.823);
+  --primary: oklch(0.6 0.18 131.684);
+  --primary-foreground: oklch(0.98 0.01 131.684);
+  --secondary: oklch(0.88 0.004 286.32);
+  --secondary-foreground: oklch(0.25 0.006 285.885);
+  --muted: oklch(0.92 0.002 286.3);
+  --muted-foreground: oklch(0.5 0.012 285.9);
+  --border: oklch(0.88 0.004 286.32);
+  --input: oklch(0.88 0.004 286.32);
+  --ring: oklch(0.7 0.2 128.85);
 }
 
 @theme inline {
@@ -71,13 +71,10 @@ button {
   cursor: pointer;
 }
 
-
-
 img {
   max-width: 100%;
   height: auto;
 }
-
 
 * {
   scrollbar-width: none; /* Firefox */
@@ -94,7 +91,6 @@ img {
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
 
 .fade-in-bottom {
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -128,5 +124,63 @@ img {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+.wobble-hor-bottom {
+  animation: wobble-hor-bottom 5s ease infinite;
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  30%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  4.5% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  9% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
+  }
+  13.5% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  18% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  22.5% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble-hor-bottom {
+  0%,
+  30%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  4.5% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  9% {
+    transform: translateX(15px) rotate(6deg);
+  }
+  13.5% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  18% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  22.5% {
+    transform: translateX(-6px) rotate(-1.2deg);
   }
 }

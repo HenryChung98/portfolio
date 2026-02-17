@@ -1,4 +1,5 @@
 export const PROFILE = {
+  isOpened: true,
   name: "Henry Chung",
   title: "Software Engineer",
   description: "Henry Chung | Software Engineer",
@@ -65,7 +66,7 @@ export const EXPERIENCES = [
     ],
   },
   {
-    title: "Prompt Engineer (Contract)",
+    title: "Prompt Engineer",
     period: "Jan 2025 - May 2025",
     company: "Outlier AI",
     projects: [
