@@ -12,6 +12,7 @@ export const PROFILE = {
   linkedin: "https://www.linkedin.com/in/henry-chung-cs",
   itchio: "https://9henrychung8.itch.io",
   blog: "https://henrychung98.github.io/blog",
+  fiverr: "https://www.fiverr.com/s/dDQpmG8",
   og: {
     title: "Henry Chung - Software Engineer",
     description:
