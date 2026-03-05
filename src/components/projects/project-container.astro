@@ -8,7 +8,7 @@ interface Props {
   skillIconAlts?: string[];
   subTitle: string;
   desc: string[];
-  sourceCodeLink?: string;
+  resourceLink?: string;
   moveLink?: string;
   accessMethod?: 'download' | 'playNow' | 'website' | '';
   team?: boolean;
@@ -23,7 +23,7 @@ const {
   skillIconAlts = [],
   subTitle,
   desc,
-  sourceCodeLink = '',
+  resourceLink = '',
   moveLink = '',
   accessMethod = '',
   team = false,
@@ -38,14 +38,14 @@ const imgSizeClasses = {
 const accessMethodText = {
   download: 'Download',
   playNow: 'Play Now',
-  website: 'Go To Website',
+  website: 'View Live',
   '': '', // Handle empty accessMethod
 };
 ---
 
 <article class="border-l-4 mb-16 border-primary p-2 flex flex-col md:flex-row justify-around w-full md:gap-16">
     <div class="w-full relative inline-block group ">
-      <div class={`absolute -top-7 left-1 text-white px-3 py-1 rounded-t-xl text-sm ${team ? 'bg-indigo-500' : 'bg-blue-500'}`}>
+      <div class={`absolute -top-7 left-1 px-3 py-1 rounded-t-xl text-sm border-t-2 border-l-2 border-r-2 border-primary/50 ${team ? 'bg-primary text-primary-foreground' : 'text-primary'}`}>
         {team ? 'Team' : 'Solo'}
       </div>
       <img
@@ -73,15 +73,15 @@ const accessMethodText = {
     <h4 class="text-muted-foreground my-4 text-sm font-semibold">{subTitle}</h4>
     
     <ul class="text-primary/80 my-4 text-sm md:text-xs font-bold">
-      {sourceCodeLink && (
+      {resourceLink && (
         <li class="inline mr-10">
           <a
-            href={sourceCodeLink}
+            href={resourceLink}
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-primary/30 duration-200"
           >
-            Source Code
+            Resource
           </a>
         </li>
       )}
