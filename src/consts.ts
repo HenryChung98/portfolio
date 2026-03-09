@@ -15,8 +15,9 @@ export const PROFILE = {
   fiverr: "https://www.fiverr.com/s/dDQpmG8",
   og: {
     title: "Henry Chung - Software Engineer",
-    description:
-      "Henry Chung is a Software Engineer specializing in TypeScript/Next.js for full-stack web applications. Experience building SaaS products with role-based access control and API optimization. View his projects, skills, and experience in modern development.",
+    description: `Henry Chung is a Software Engineer specializing in TypeScript/Next.js for full-stack
+     web applications. Experience building SaaS products with role-based access control and API optimization. 
+     View his projects, skills, and experience in modern development.`,
     image: "/portfolio/logo.webp",
     imageAlt: "Henry Chung - Software Engineer",
     url: "https://henrychung98.github.io/portfolio",
@@ -66,21 +67,21 @@ export const EXPERIENCES = [
       },
     ],
   },
-  {
-    title: "Prompt Engineer",
-    period: "Jan 2025 - May 2025",
-    company: "Outlier AI",
-    projects: [
-      {
-        name: "Cypher RLHF",
-        responsibilities: [
-          "Designed and evaluated prompts for code generation, testing, refactoring, and solution reasoning tasks",
-          "Assessed LLM outputs for instruction-following, truthfulness, localization, writing style, and verbosity",
-          "Conducted peer reviews to ensure quality standards and guideline consistency across team deliverables",
-        ],
-      },
-    ],
-  },
+  // {
+  //   title: "Prompt Engineer",
+  //   period: "Jan 2025 - May 2025",
+  //   company: "Outlier AI",
+  //   projects: [
+  //     {
+  //       name: "Cypher RLHF",
+  //       responsibilities: [
+  //         "Designed and evaluated prompts for code generation, testing, refactoring, and solution reasoning tasks",
+  //         "Assessed LLM outputs for instruction-following, truthfulness, localization, writing style, and verbosity",
+  //         "Conducted peer reviews to ensure quality standards and guideline consistency across team deliverables",
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 
 export const LIST_STYLE = "list-disc text-muted-foreground";
