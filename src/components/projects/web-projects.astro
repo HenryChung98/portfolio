@@ -17,34 +17,29 @@ const getBannerPath = (path: string) => {
 
 <ProjectContainer
   imgPath={getBannerPath("crm-application.webp")}
-  title="CRM Application (Ongoing)"
+  title="CRM Web Application"
   imgAlt="Multi-organization CRM Web Application with user management across multiple organizations"
   skillIcons={[
-    getIconPath("frontend/tanstack-query-icon.webp"),
-    getIconPath("frontend/shadcn-ui-icon.webp"),
     getIconPath("frontend/nextjs-icon.webp"),
-    getIconPath("backend/supabase-icon.webp"),
-    getIconPath("backend/nest-js-icon.webp"),
+    getIconPath("frontend/tanstack-query-icon.webp"),
     getIconPath("backend/postgresql-icon.webp"),
     getIconPath("language/typescript-icon.webp"),
     getIconPath("frontend/tailwind-css-icon.webp"),
   ]}
   skillIconAlts={[
-    "tanstack",
-    "shadcn",
     "nextjs",
-    "supabase",
+    "tanstack",
     "postgresql",
     "typescript",
     "tailwind",
   ]}
   subTitle="Multi-organization CRM Web Application with user management across multiple organizations"
   desc={[
-    "Built multi-organization CRM platform for customer management, activity tracking, and sales pipeline analytics",
-    "Designed role-based access control system with isolated data architecture per organization",
-    "Reduced API calls using TanStack Query for client-side caching and request deduplication",
+    "Featuring RBAC, drag-and-drop Kanban pipeline, FullCalendar scheduling, and member invitation emails via Resend",
+    "Implemented optimistic updates with Tanstack Query and inline-editable data tables",
+    "Built full-stack data layer with Drizzle ORM and Server Actions, integrated Better Auth for session and organization management",
   ]}
-  moveLink="https://henry-crm-project.vercel.app/"
+  moveLink="https://hc-crm-mvp.vercel.app/"
   accessMethod="website"
 />
 
@@ -55,7 +50,6 @@ const getBannerPath = (path: string) => {
   skillIcons={[
     getIconPath("devops/oracle-icon.webp"),
     getIconPath("devops/docker-icon.webp"),
-    getIconPath("frontend/shadcn-ui-icon.webp"),
     getIconPath("frontend/nextjs-icon.webp"),
     getIconPath("language/typescript-icon.webp"),
     getIconPath("frontend/tailwind-css-icon.webp"),
@@ -63,7 +57,6 @@ const getBannerPath = (path: string) => {
   skillIconAlts={[
     "Oracle",
     "Docker",
-    "Shadcn UI",
     "Next.js",
     "TypeScript",
     "Tailwind CSS",
