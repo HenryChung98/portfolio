@@ -18,7 +18,7 @@ const getBannerPath = (path: string) => {
 <ProjectContainer
   imgPath={getBannerPath("crm-application.webp")}
   title="CRM Web Application"
-  imgAlt="Multi-organization CRM Web Application with user management across multiple organizations"
+  imgAlt="Internal CRM Web Application with member management"
   skillIcons={[
     getIconPath("frontend/nextjs-icon.webp"),
     getIconPath("frontend/tanstack-query-icon.webp"),
@@ -33,12 +33,13 @@ const getBannerPath = (path: string) => {
     "typescript",
     "tailwind",
   ]}
-  subTitle="Multi-organization CRM Web Application with user management across multiple organizations"
+  subTitle="Internal CRM Web Application with member management"
   desc={[
     "Featuring RBAC, drag-and-drop Kanban pipeline, FullCalendar scheduling, and member invitation emails via Resend",
     "Implemented optimistic updates with Tanstack Query and inline-editable data tables",
     "Built full-stack data layer with Drizzle ORM and Server Actions, integrated Better Auth for session and organization management",
   ]}
+  resourceLink="https://henrychung98.github.io/blog/posts/010-crm-web-app-project/"
   moveLink="https://hc-crm-mvp.vercel.app/"
   accessMethod="website"
 />
