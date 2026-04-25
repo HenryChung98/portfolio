@@ -2,9 +2,16 @@
 import SectionTitle from "../components/section-title.astro";
 import AWSCertAI from "../assets/icons/certificate/aws-certified-ai-practitioner.webp";
 import AWSCertCloud from "../assets/icons/certificate/aws-certified-cloud-practitioner.webp";
+import AWSCertCloudOps from "../assets/icons/certificate/aws-certified-cloudops-engineer-associate.webp";
 import { EXPERIENCES } from "../consts";
 
 const certifications = [
+  {
+    iconPath: AWSCertCloudOps.src,
+    iconAlt: "aws-certified-cloudops-engineer-associate",
+    issueDate: "April 2026",
+    expiryDate: "Expires April 2029"
+  },
   {
     iconPath: AWSCertAI.src,
     iconAlt: "aws-certified-ai-practitioner",
@@ -25,11 +32,12 @@ const certifications = [
   <SectionTitle title="Summary" variant="secondary" />
 
   <p class="mb-4 text-foreground/80">
-    Completed Computing Science diploma at Douglas College, with a strong foundation
-    in computer science fundamentals.
+    Software Engineer specializing in TypeScript, Next.js, and PostgreSQL. 
   </p>
   <p class="mb-4 text-foreground/80">
-    Experienced in building modern web applications using Next.js, TypeScript, and Tailwind CSS on the frontend, and NestJS, PostgreSQL with Drizzle ORM on the backend.
+    Experienced in designing role-based access control systems 
+    and multi-entity relational data models, building analytics dashboards, and developing backend systems with Drizzle ORM
+    and optimized API design for analytics and workflow applications.
   </p>
   <p class="mb-4 text-foreground/80">
     Also have hands-on experience in game development using Unreal Engine and Unity with C#.

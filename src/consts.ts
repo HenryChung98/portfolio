@@ -60,9 +60,9 @@ export const EXPERIENCES = [
       {
         name: "Non-profit Website Redesign",
         responsibilities: [
-          "Led frontend team of 4 developers, owned overall frontend architecture and code quality",
-          "Ensured responsive design and consistent implementation across devices",
-          "Coordinated with UX lead and backend team to ensure seamless integration",
+          "Lead frontend team of 4 developers, owned overall frontend architecture and code quality",
+          "Ensure responsive design and cross-device compatibility",
+          "Coordinate with UX lead and backend team to ensure seamless integration",
         ],
       },
     ],
