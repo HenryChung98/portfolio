@@ -3,9 +3,16 @@ import SectionTitle from "../components/section-title.astro";
 import AWSCertAI from "../assets/icons/certificate/aws-certified-ai-practitioner.webp";
 import AWSCertCloud from "../assets/icons/certificate/aws-certified-cloud-practitioner.webp";
 import AWSCertCloudOps from "../assets/icons/certificate/aws-certified-cloudops-engineer-associate.webp";
+import AWSCertSecurity from "../assets/icons/certificate/aws-certified-security-specialty.webp";
 import { EXPERIENCES } from "../consts";
 
 const certifications = [
+  {
+    iconPath: AWSCertSecurity.src,
+    iconAlt: "aws-certified-security-specialty",
+    issueDate: "May 2026",
+    expiryDate: "Expires May 2029"
+  },
   {
     iconPath: AWSCertCloudOps.src,
     iconAlt: "aws-certified-cloudops-engineer-associate",
