@@ -17,19 +17,6 @@ export function updateActiveNavButton(sectionId: string) {
   });
 }
 
-export function setupNavigation() {
-  document.querySelectorAll(".nav-button a").forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const href = link.getAttribute("href");
-      if (!href) return;
-
-      const sectionId = href.replace("#", "");
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-    });
-  });
-}
-
 export function setupScrollObserver() {
   const sections = document.querySelectorAll("section[id]");
 

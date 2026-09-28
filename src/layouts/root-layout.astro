@@ -6,6 +6,16 @@ import { getAbsoluteLocaleUrl } from 'astro:i18n';
 
 const locale = Astro.currentLocale ?? 'en';
 const t = getTranslations(locale);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: PROFILE.name,
+  url: getAbsoluteLocaleUrl('en'),
+  jobTitle: PROFILE.title,
+  sameAs: [PROFILE.github, PROFILE.linkedin, PROFILE.blog],
+  knowsAbout: ["JavaScript", "TypeScript", "React", "Next.js", "PostgreSQL"],
+};
 ---
 
 <!doctype html>
@@ -25,7 +35,7 @@ const t = getTranslations(locale);
     <link rel="alternate" hreflang="en" href={getAbsoluteLocaleUrl('en')} />
     <link rel="alternate" hreflang="ko" href={getAbsoluteLocaleUrl('ko')} />
     <link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl('en')} />
-    <meta name="author" content="Henry Chung" />
+    <meta name="author" content={PROFILE.name} />
     <meta name="theme-color" content="#d7d7da" />
 
     <!-- Open Graph tags -->
@@ -37,11 +47,11 @@ const t = getTranslations(locale);
     <meta property="og:type" content={PROFILE.og.type} />
     <meta
       property="og:url"
-      content={PROFILE.og.url}
+      content={getAbsoluteLocaleUrl(locale)}
     />
     <meta
       property="og:image"
-      content={PROFILE.og.image}
+      content={new URL(PROFILE.og.image, Astro.site).href}
     />
     <meta
       property="og:image:alt"
@@ -57,27 +67,7 @@ const t = getTranslations(locale);
       rel="stylesheet"
     />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Henry Chung",
-        "url": "https://henrychung98.github.io/portfolio/",
-        "jobTitle": "Software Engineer",
-        "sameAs": [
-          "https://github.com/HenryChung98",
-          "https://www.linkedin.com/in/henry-chung-cs/",
-          "https://henrychung98.github.io/blog"
-        ],
-        "knowsAbout": [
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "Next.js",
-          "PostgreSQL"
-        ]
-      }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 	</head>
 	<body>
 		<slot />

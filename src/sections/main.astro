@@ -63,11 +63,6 @@ const socialLinks = [
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
               </svg>
               <span class="text-xs">{PROFILE.email}</span>
-              {PROFILE.isOpened && (
-                <span class="absolute -bottom-6 bg-primary text-primary-foreground text-xs px-2 py-1 rounded opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-                    {t.main.openTo}
-                </span>
-              )}
             </a>
 
         </div>
@@ -120,7 +115,6 @@ const socialLinks = [
 </section>
 
 <script>
-  import { setupNavigation, setupScrollObserver } from '../navigation';
-  setupNavigation();
+  import { setupScrollObserver } from '../navigation';
   setupScrollObserver();
 </script>

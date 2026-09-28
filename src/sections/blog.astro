@@ -37,7 +37,7 @@ const recentPosts: Post[] = await response.json();
         <p class="mb-4 text-sm leading-relaxed text-foreground/80">{post.description}</p>
         <div class="flex items-center gap-2">
           <time class="text-xs text-muted-foreground">
-            {new Date(post.pubDate).toLocaleDateString(t.blog.dateLocale, {
+            {new Date(post.pubDate).toLocaleDateString(t.meta.dateLocale, {
               year: "numeric",
               month: "short",
               day: "numeric",

@@ -1,81 +1,52 @@
 ---
-import { getTranslations } from "../../i18n";
-
-const t = getTranslations(Astro.currentLocale);
+import type { Project } from "../../data/projects";
+import { SKILLS } from "../../data/skills";
+import { asset } from "../../utils/asset";
+import { getTranslations, type Locale } from "../../i18n";
 
 interface Props {
-  // imgRatio: 'square' | 'landscape' | 'portrait';
-  imgPath: string;
-  imgAlt: string;
-  title: string;
-  skillIcons?: string[];
-  skillIconAlts?: string[];
-  subTitle: string;
-  desc: string[];
-  resourceLink?: string;
-  moveLink?: string;
-  accessMethod?: 'download' | 'playNow' | 'website' | '';
-  team?: boolean;
+  project: Project;
 }
 
-const {
-  // imgRatio,
-  imgPath,
-  imgAlt,
-  title,
-  skillIcons = [],
-  skillIconAlts = [],
-  subTitle,
-  desc,
-  resourceLink = '',
-  moveLink = '',
-  accessMethod = '',
-  team = false,
-} = Astro.props;
-
-const imgSizeClasses = {
-  square: 'max-w-[200px] md:max-w-[100px] aspect-square',
-  landscape: 'max-w-[400px] md:max-w-[550px] aspect-video',
-  portrait: 'max-w-[280px] md:max-w-[380px] aspect-[2/3]',
-};
-
-const accessMethodText = t.projects.access;
+const { project } = Astro.props;
+const t = getTranslations(Astro.currentLocale);
+const { title, subTitle, desc } = project[(Astro.currentLocale ?? "en") as Locale];
 ---
 
 <article class="border-l-4 mb-16 border-primary p-2 flex flex-col md:flex-row justify-around w-full md:gap-16">
     <div class="w-full relative inline-block group ">
-      <div class={`absolute -top-7 left-1 px-3 py-1 rounded-t-xl text-sm border-t-2 border-l-2 border-r-2 border-primary/50 ${team ? 'bg-primary text-primary-foreground' : 'text-primary'}`}>
-        {team ? t.projects.team : t.projects.solo}
+      <div class={`absolute -top-7 left-1 px-3 py-1 rounded-t-xl text-sm border-t-2 border-l-2 border-r-2 border-primary/50 ${project.team ? 'bg-primary text-primary-foreground' : 'text-primary'}`}>
+        {project.team ? t.projects.team : t.projects.solo}
       </div>
       <img
-        src={`${imgPath}`}
-        alt={imgAlt}
+        src={asset(`project-banners/${project.banner}`).src}
+        alt={subTitle}
+        loading="lazy"
         class="mx-auto mb-6 rounded border-2 border-primary/50 object-cover w-full max-w-[400px] md:max-w-[550px] aspect-video"
         />
-        <!-- class={`mx-auto mb-6 rounded border-2 border-primary/50 w-full object-cover ${imgSizeClasses[imgRatio]}`} -->
     </div>
-  
+
   <div class="w-full ml-3">
     <div class="flex flex-col">
       <h4 class="text-xl text-secondary-foreground font-semibold mb-3 pb-1">{title}</h4>
       <div class="flex flex-wrap">
-        {skillIcons.map((icon, index) => (
+        {project.skills.map((id) => (
           <img
-            src={icon}
-            alt={skillIconAlts[index] || `Skill Icon ${index + 1}`}
+            src={SKILLS[id].icon.src}
+            alt={SKILLS[id].label}
             class="w-6 h-6 mx-1 md:mx-2"
           />
         ))}
       </div>
     </div>
-    
+
     <h4 class="text-muted-foreground my-4 text-sm font-semibold">{subTitle}</h4>
-    
+
     <ul class="text-primary/80 my-4 text-sm md:text-xs font-bold">
-      {resourceLink && (
+      {project.resource && (
         <li class="inline mr-10">
           <a
-            href={resourceLink}
+            href={project.resource}
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-primary/30 duration-200"
@@ -84,18 +55,20 @@ const accessMethodText = t.projects.access;
           </a>
         </li>
       )}
-      <li class="inline">
-        <a
-          href={moveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-primary/30 duration-200"
-        >
-          {accessMethodText[accessMethod]}
-        </a>
-      </li>
+      {project.live && (
+        <li class="inline">
+          <a
+            href={project.live.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-primary/30 duration-200"
+          >
+            {t.projects.access[project.live.label]}
+          </a>
+        </li>
+      )}
     </ul>
-    
+
     <ul class="text-muted-foreground m-5 text-sm font-semibold space-y-2">
       {desc.map((item) => (
         <li class="list-disc text-muted-foreground">

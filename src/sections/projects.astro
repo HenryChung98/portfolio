@@ -1,37 +1,38 @@
 ---
 import SectionTitle from "../components/section-title.astro";
-import WebProjects from "../components/projects/web-projects.astro";
-import GameProjects from "../components/projects/game-projects.astro";
+import ProjectContainer from "../components/projects/project-container.astro";
+import { PROJECTS } from "../data/projects";
 import { getTranslations } from "../i18n";
 
 const t = getTranslations(Astro.currentLocale);
 
-const tabs = [
-  { id: 'web', label: t.projects.tabs.web },
-  { id: 'game', label: t.projects.tabs.game },
-];
+// tab order follows t.projects.tabs; a tab shows up once its category has a project
+const tabs = (Object.keys(t.projects.tabs) as (keyof typeof t.projects.tabs)[]).filter((id) =>
+  PROJECTS.some((project) => project.category === id)
+);
 ---
 
 <SectionTitle title={t.projects.title} />
   <ul class="flex justify-center gap-4 mb-6 md:mb-12">
-    {tabs.map((tab) => (
+    {tabs.map((id) => (
       <li class="inline-block w-20 text-center">
         <button
-          data-tab={tab.id}
+          data-tab={id}
           class="tab-button duration-100 px-3 py-1 w-20 rounded-full mb-1 border-2 border-primary/50"
         >
-          {tab.label}
+          {t.projects.tabs[id]}
         </button>
       </li>
     ))}
   </ul>
 <div class="flex flex-col">
-  <div data-content="web" class="tab-content">
-    <WebProjects />
-  </div>
-  <div data-content="game" class="tab-content hidden">
-    <GameProjects />
-  </div>
+  {tabs.map((id, index) => (
+    <div data-content={id} class:list={["tab-content", { hidden: index > 0 }]}>
+      {PROJECTS.filter((project) => project.category === id).map((project) => (
+        <ProjectContainer project={project} />
+      ))}
+    </div>
+  ))}
 </div>
 
 <script>
@@ -58,7 +59,7 @@ const tabs = [
     });
   }
 
-  setActiveTab('web');
+  setActiveTab(buttons[0]?.getAttribute('data-tab') ?? '');
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {

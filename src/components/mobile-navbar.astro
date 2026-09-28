@@ -23,10 +23,6 @@ const t = getTranslations(Astro.currentLocale);
 </header>
 
 <script>
-  import { setupNavigation } from '../navigation';
-  
-  setupNavigation();
-  
   let lastScrollY = 0;
   let ticking = false;
   const navbar = document.getElementById('navbar');

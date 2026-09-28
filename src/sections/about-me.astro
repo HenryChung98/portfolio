@@ -1,32 +1,20 @@
 ---
 import SectionTitle from "../components/section-title.astro";
-import AWSCertAI from "../assets/icons/certificate/aws-certified-ai-practitioner.webp";
-import AWSCertCloud from "../assets/icons/certificate/aws-certified-cloud-practitioner.webp";
-import AWSCertCloudOps from "../assets/icons/certificate/aws-certified-cloudops-engineer-associate.webp";
-import AWSCertSecurity from "../assets/icons/certificate/aws-certified-security-specialty.webp";
 import { getTranslations } from "../i18n";
+import { asset } from "../utils/asset";
 
 const t = getTranslations(Astro.currentLocale);
 
-// dates are localized in src/i18n (t.about.certDates, same order)
+// icon: file in src/assets/icons/certificate, dates: "YYYY-MM" (formatted per locale below)
 const certifications = [
-  {
-    iconPath: AWSCertSecurity.src,
-    iconAlt: "aws-certified-security-specialty",
-  },
-  {
-    iconPath: AWSCertCloudOps.src,
-    iconAlt: "aws-certified-cloudops-engineer-associate",
-  },
-  {
-    iconPath: AWSCertAI.src,
-    iconAlt: "aws-certified-ai-practitioner",
-  },
-  {
-    iconPath: AWSCertCloud.src,
-    iconAlt: "aws-certified-cloud-practitioner",
-  }
+  { name: "AWS Certified Security - Specialty", icon: "aws-certified-security-specialty.webp", issued: "2026-05", expires: "2029-05" },
+  { name: "AWS Certified CloudOps Engineer - Associate", icon: "aws-certified-cloudops-engineer-associate.webp", issued: "2026-04", expires: "2029-04" },
+  { name: "AWS Certified AI Practitioner", icon: "aws-certified-ai-practitioner.webp", issued: "2025-07", expires: "2028-07" },
+  { name: "AWS Certified Cloud Practitioner", icon: "aws-certified-cloud-practitioner.webp", issued: "2025-06", expires: "2028-06" },
 ];
+
+const formatMonth = (yearMonth: string) =>
+  new Date(yearMonth).toLocaleDateString(t.meta.dateLocale, { year: "numeric", month: "long", timeZone: "UTC" });
 ---
 
 <article class="mb-16">
@@ -73,16 +61,16 @@ const certifications = [
 <article class="mb-16">
   <SectionTitle title={t.about.certifications} variant="secondary" />
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-  {certifications.map((cert, index) => (
+  {certifications.map((cert) => (
     <div class="border-l-4 border-primary p-6 flex items-center gap-6 transition-colors">
       <img
-        src={cert.iconPath}
-        alt={cert.iconAlt}
+        src={asset(`icons/certificate/${cert.icon}`).src}
+        alt={cert.name}
         class="w-20 md:w-24"
       />
       <div class="flex-1">
-        <p class="text-sm text-foreground/80 font-medium mb-1">{t.about.certDates[index].issueDate}</p>
-        <p class="text-sm text-muted-foreground">{t.about.certDates[index].expiryDate}</p>
+        <p class="text-sm text-foreground/80 font-medium mb-1">{t.about.certIssued.replace("{date}", formatMonth(cert.issued))}</p>
+        <p class="text-sm text-muted-foreground">{t.about.certExpires.replace("{date}", formatMonth(cert.expires))}</p>
       </div>
     </div>
   ))}

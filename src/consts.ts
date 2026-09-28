@@ -3,7 +3,6 @@ export const PROFILE = {
   name: "Henry Chung",
   title: "Software Engineer",
   description: "Henry Chung | Software Engineer",
-  avatar: "/portfolio/logo.webp",
   email: "henrychung.dev@gmail.com",
   phone: "+1 778 322 3951",
   location: "Burnaby, Canada",
@@ -18,9 +17,8 @@ export const PROFILE = {
     description: `Henry Chung is a Software Engineer specializing in TypeScript/Next.js for full-stack
      web applications. Experience building SaaS products with role-based access control and API optimization. 
      View his projects, skills, and experience in modern development.`,
-    image: "/portfolio/logo.webp",
+    image: "/portfolio/logo-png.png",
     imageAlt: "Henry Chung - Software Engineer",
-    url: "https://henrychung98.github.io/portfolio",
     type: "website",
     siteName: "Henry Chung",
     locale: "en_CA",
@@ -47,5 +45,3 @@ export const NAV_ITEMS = [
     icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z",
   },
 ];
-
-export const LIST_STYLE = "list-disc text-muted-foreground";
